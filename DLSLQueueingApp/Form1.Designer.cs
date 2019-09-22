@@ -65,9 +65,10 @@
             // mobileQueuePage11
             // 
             this.mobileQueuePage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
-            this.mobileQueuePage11.Location = new System.Drawing.Point(4, 412);
+            this.mobileQueuePage11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mobileQueuePage11.Location = new System.Drawing.Point(0, 416);
             this.mobileQueuePage11.Name = "mobileQueuePage11";
-            this.mobileQueuePage11.Size = new System.Drawing.Size(1897, 608);
+            this.mobileQueuePage11.Size = new System.Drawing.Size(1898, 608);
             this.mobileQueuePage11.TabIndex = 3;
             // 
             // Form1
