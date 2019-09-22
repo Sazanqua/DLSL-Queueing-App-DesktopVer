@@ -143,5 +143,29 @@
   <ItemGroup>
     <None Include="Resources\Group 43.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paascu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cbeam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cihtm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\col.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nursing.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -81,6 +81,7 @@
             this.Controls.Add(this.page41);
             this.Controls.Add(this.page31);
             this.Controls.Add(this.page21);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DLSL Queueing App";

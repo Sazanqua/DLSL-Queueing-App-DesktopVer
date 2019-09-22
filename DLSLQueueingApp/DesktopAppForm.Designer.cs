@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DesktopAppForm));
             this.queueingBtn = new System.Windows.Forms.Button();
             this.monitoringBtn = new System.Windows.Forms.Button();
             this.ticketBtn = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // queueingBtn
@@ -76,18 +78,36 @@
             this.ticketBtn.UseVisualStyleBackColor = false;
             this.ticketBtn.Click += new System.EventHandler(this.ticketBtn_Click);
             // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.closeBtn.Location = new System.Drawing.Point(150, 425);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(500, 75);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.Text = "CLOSE APPLICATION";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // DesktopAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.ticketBtn);
             this.Controls.Add(this.monitoringBtn);
             this.Controls.Add(this.queueingBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DesktopAppForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DesktopAppForm";
+            this.Text = "DLSL Queueing App";
             this.Load += new System.EventHandler(this.DesktopAppForm_Load);
             this.ResumeLayout(false);
 
@@ -97,5 +117,6 @@
         private System.Windows.Forms.Button queueingBtn;
         private System.Windows.Forms.Button monitoringBtn;
         private System.Windows.Forms.Button ticketBtn;
+        private System.Windows.Forms.Button closeBtn;
     }
 }

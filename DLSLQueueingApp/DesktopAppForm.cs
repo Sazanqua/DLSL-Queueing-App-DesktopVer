@@ -15,11 +15,22 @@ namespace DLSLQueueingApp
         public DesktopAppForm()
         {
             InitializeComponent();
+            MaximizeBox = false; // Disable Maximize button
+        }
+        private const int CP_NOCLOSE_BUTTON = 0x200; // Disable Close button
+        protected override CreateParams CreateParams // Disable Close button
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         private void DesktopAppForm_Load(object sender, EventArgs e)
         {
-            //BackColor = ColorTranslator.FromHtml("#21282E");
+            closeBtn.BackColor = ColorTranslator.FromHtml("#FF4C4C");
             queueingBtn.BackColor = ColorTranslator.FromHtml("#21282E");
             monitoringBtn.BackColor = ColorTranslator.FromHtml("#21282E");
             ticketBtn.BackColor = ColorTranslator.FromHtml("#21282E");
@@ -29,6 +40,11 @@ namespace DLSLQueueingApp
         {
             Form1 f1 = new Form1();
             f1.ShowDialog();
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
