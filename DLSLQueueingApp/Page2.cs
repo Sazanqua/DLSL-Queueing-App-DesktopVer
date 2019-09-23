@@ -25,18 +25,23 @@ namespace DLSLQueueingApp
             }
         }
         public Page3 Page3 { get; set; }
+        public Panel pagePanel { get; set; }
+
         public MobileQueuePage1 MobileQueuePage1 { get; set; }
 
         public Page2()
         {
             InitializeComponent();
             BackColor = ColorTranslator.FromHtml("#21282E");
-
+            pagePanel.Controls.Add(Page3.Instance);
         }
 
         private void manualQueueBtn_Click(object sender, EventArgs e)
         {
-            Page3?.BringToFront();
+            //Page3?.BringToFront();
+            pagePanel.Controls.Add(Page3.Instance); // Para pumunta sa harap yung page2.cs
+            Page3.Instance.Dock = DockStyle.Bottom; // Para pumunta sa harap yung page2.cs
+            Page3.Instance.BringToFront(); // Para pumunta sa harap yung page2.cs
         }
 
         private void Page2_Load(object sender, EventArgs e)
@@ -48,16 +53,6 @@ namespace DLSLQueueingApp
         private void mobileAppQueueBtn_Click(object sender, EventArgs e)
         {
             //MobileQueuePage1?.BringToFront();
-            //if (!pagePanel.Controls.Contains(Page3.Instance))
-            //{
-            //    pagePanel.Controls.Add(Page3.Instance);
-            //    Page3.Instance.Dock = DockStyle.Fill;
-            //    Page3.Instance.BringToFront();
-            //}
-            //else
-            //{
-            //    Page3.Instance.BringToFront();
-            //
         }
     }
 }

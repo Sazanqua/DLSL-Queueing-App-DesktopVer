@@ -109,6 +109,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLSL Queueing App";
             this.Load += new System.EventHandler(this.DesktopAppForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DesktopAppForm_MouseDown);
             this.ResumeLayout(false);
 
         }

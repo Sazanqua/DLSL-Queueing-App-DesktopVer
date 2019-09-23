@@ -12,6 +12,7 @@ namespace DLSLQueueingApp
 {
     public partial class DesktopAppForm : Form
     {
+        int x = 0;
         public DesktopAppForm()
         {
             InitializeComponent();
@@ -45,6 +46,16 @@ namespace DLSLQueueingApp
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void DesktopAppForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            x += 1;
+            if(x == 25)
+            {
+                MessageBox.Show("THESIS 2019 \n\nDLSL QUEUEING APP \n\nMJ CASTRO \nAMIEL AGBAY \nFRANCIS CUSTODIO");
+                x = 0;
+            }
         }
     }
 }

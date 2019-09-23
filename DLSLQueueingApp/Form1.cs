@@ -18,9 +18,9 @@ namespace DLSLQueueingApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TopMost = true;
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
+            //TopMost = true; // Para fullscreen
+            //FormBorderStyle = FormBorderStyle.None; // Para fullscreen
+            //WindowState = FormWindowState.Maximized; // Para fullscreen
 
             pagePanel.Controls.Add(Page2.Instance); // Para pumunta sa harap yung page2.cs
             Page2.Instance.Dock = DockStyle.Bottom; // Para pumunta sa harap yung page2.cs

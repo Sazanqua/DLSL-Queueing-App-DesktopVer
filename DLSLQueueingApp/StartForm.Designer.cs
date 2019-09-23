@@ -39,6 +39,7 @@
             this.startFormPasswordTxtbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.startFormLoginBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.startFormPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageLoader)).BeginInit();
             this.SuspendLayout();
@@ -147,11 +148,21 @@
             this.startFormLoginBtn.UseVisualStyleBackColor = false;
             this.startFormLoginBtn.Click += new System.EventHandler(this.startFormLoginBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(248, 431);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 720);
+            this.ClientSize = new System.Drawing.Size(500, 750);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.startFormLoginBtn);
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.startFormPasswordTxtbox);
@@ -186,5 +197,6 @@
         private System.Windows.Forms.Button startFormLoginBtn;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.PictureBox imageLoader;
+        private System.Windows.Forms.Label label1;
     }
 }
