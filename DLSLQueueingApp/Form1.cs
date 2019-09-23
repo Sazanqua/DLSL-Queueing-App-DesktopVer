@@ -21,7 +21,23 @@ namespace DLSLQueueingApp
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            page21.BringToFront();
+
+            pagePanel.Controls.Add(Page2.Instance); // Para pumunta sa harap yung page2.cs
+            Page2.Instance.Dock = DockStyle.Bottom; // Para pumunta sa harap yung page2.cs
+            Page2.Instance.BringToFront(); // Para pumunta sa harap yung page2.cs
+        }
+
+        private void mobileQueuePage11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape) // Esc to close program
+            {
+                Close();
+            }
         }
     }
 }

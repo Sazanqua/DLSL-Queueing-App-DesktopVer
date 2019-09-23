@@ -13,3 +13,4 @@ C:\Users\yhigashioka\source\repos\DLSLQueueingApp\DLSLQueueingApp\obj\Debug\DLSL
 C:\Users\yhigashioka\source\repos\DLSLQueueingApp\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.StartForm.resources
 C:\Users\yhigashioka\source\repos\DLSLQueueingApp\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.DesktopAppForm.resources
 C:\Users\yhigashioka\source\repos\DLSLQueueingApp\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.csprojAssemblyReference.cache
+C:\Users\yhigashioka\source\repos\DLSLQueueingApp\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.sample.resources

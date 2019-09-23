@@ -13,6 +13,21 @@ namespace DLSLQueueingApp
     public partial class Page3 : UserControl
     {
         public Page4 Page4 { get; set; }
+
+        private static Page2 _instance; // New page
+        public static Page2 Instance // New page
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Page2();
+                }
+                return _instance;
+            }
+        }
+
+
         public Page3()
         {
             InitializeComponent();
