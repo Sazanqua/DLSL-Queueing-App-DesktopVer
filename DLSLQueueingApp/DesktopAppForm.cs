@@ -57,5 +57,11 @@ namespace DLSLQueueingApp
                 x = 0;
             }
         }
+
+        private void monitoringBtn_Click(object sender, EventArgs e)
+        {
+            MonitoringForm mf = new MonitoringForm();
+            mf.ShowDialog();
+        }
     }
 }

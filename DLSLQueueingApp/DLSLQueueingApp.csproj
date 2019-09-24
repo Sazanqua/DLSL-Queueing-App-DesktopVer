@@ -67,6 +67,24 @@
     <Compile Include="MobileQueuePage1.Designer.cs">
       <DependentUpon>MobileQueuePage1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonitoringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitoringForm.Designer.cs">
+      <DependentUpon>MonitoringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorMainUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonitorMainUserControl.Designer.cs">
+      <DependentUpon>MonitorMainUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonitorUserControl.Designer.cs">
+      <DependentUpon>MonitorUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MobileQueuePage1.resx">
       <DependentUpon>MobileQueuePage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoringForm.resx">
+      <DependentUpon>MonitoringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorMainUserControl.resx">
+      <DependentUpon>MonitorMainUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorUserControl.resx">
+      <DependentUpon>MonitorUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page2.resx">
       <DependentUpon>Page2.cs</DependentUpon>

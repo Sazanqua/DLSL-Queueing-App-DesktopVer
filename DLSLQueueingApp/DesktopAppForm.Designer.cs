@@ -62,6 +62,7 @@
             this.monitoringBtn.TabIndex = 9;
             this.monitoringBtn.Text = "MONITORING";
             this.monitoringBtn.UseVisualStyleBackColor = false;
+            this.monitoringBtn.Click += new System.EventHandler(this.monitoringBtn_Click);
             // 
             // ticketBtn
             // 

@@ -38,7 +38,7 @@
             // 
             // pagePanel
             // 
-            this.pagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pagePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pagePanel.Location = new System.Drawing.Point(0, 416);
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(1898, 608);
