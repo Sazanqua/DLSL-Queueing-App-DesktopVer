@@ -36,7 +36,7 @@
             // 
             this.manualQueueBtn.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manualQueueBtn.ForeColor = System.Drawing.Color.White;
-            this.manualQueueBtn.Location = new System.Drawing.Point(500, 0);
+            this.manualQueueBtn.Location = new System.Drawing.Point(500, 50);
             this.manualQueueBtn.Name = "manualQueueBtn";
             this.manualQueueBtn.Size = new System.Drawing.Size(900, 180);
             this.manualQueueBtn.TabIndex = 4;
@@ -48,7 +48,7 @@
             // 
             this.mobileAppQueueBtn.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mobileAppQueueBtn.ForeColor = System.Drawing.Color.White;
-            this.mobileAppQueueBtn.Location = new System.Drawing.Point(500, 233);
+            this.mobileAppQueueBtn.Location = new System.Drawing.Point(500, 283);
             this.mobileAppQueueBtn.Name = "mobileAppQueueBtn";
             this.mobileAppQueueBtn.Size = new System.Drawing.Size(900, 180);
             this.mobileAppQueueBtn.TabIndex = 3;
