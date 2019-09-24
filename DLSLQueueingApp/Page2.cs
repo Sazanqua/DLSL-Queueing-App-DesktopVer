@@ -33,15 +33,14 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
             BackColor = ColorTranslator.FromHtml("#21282E");
-            pagePanel.Controls.Add(Page3.Instance);
         }
 
         private void manualQueueBtn_Click(object sender, EventArgs e)
         {
             //Page3?.BringToFront();
-            pagePanel.Controls.Add(Page3.Instance); // Para pumunta sa harap yung page2.cs
-            Page3.Instance.Dock = DockStyle.Bottom; // Para pumunta sa harap yung page2.cs
-            Page3.Instance.BringToFront(); // Para pumunta sa harap yung page2.cs
+            //pagePanel.Controls.Add(Page3.Instance); // Para pumunta sa harap yung page2.cs
+            //Page3.Instance.Dock = DockStyle.Bottom; // Para pumunta sa harap yung page2.cs
+            //Page3.Instance.BringToFront(); // Para pumunta sa harap yung page2.cs
         }
 
         private void Page2_Load(object sender, EventArgs e)
