@@ -38,7 +38,7 @@
             // 
             // pagePanel
             // 
-            this.pagePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pagePanel.Location = new System.Drawing.Point(0, 416);
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(1898, 608);
@@ -77,6 +77,7 @@
             this.page21.MobileQueuePage1 = null;
             this.page21.Name = "page21";
             this.page21.Page3 = null;
+            this.page21.pagePanel = null;
             this.page21.Size = new System.Drawing.Size(50, 50);
             this.page21.TabIndex = 0;
             // 
