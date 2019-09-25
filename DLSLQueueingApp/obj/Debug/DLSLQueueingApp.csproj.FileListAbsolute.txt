@@ -32,3 +32,10 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitoringForm.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitorUserControl.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitorMainUserControl.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\MySql.Data.dll
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\Google.Protobuf.dll
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\Renci.SshNet.dll
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\MySql.Data.xml
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.csprojAssemblyReference.cache
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.csproj.CopyComplete

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient; // Para makaconnect sa mysql database
 
 namespace DLSLQueueingApp
 {
@@ -23,6 +24,11 @@ namespace DLSLQueueingApp
         public StartForm()
         {
             InitializeComponent();
+            //String ConnectString = "server=localhost;user id=root;database=dlsl_app"; // Para magstart yung mysql
+            //MySqlConnection con = new MySqlConnection("ConnectString");
+
+            //MySqlDataAdapter msDataAdapter = new MySqlDataAdapter();
+            //msDataAdapter.SelectCommand = new MySqlCommand("");
         }
 
         private void StartForm_Load(object sender, EventArgs e)
@@ -37,6 +43,25 @@ namespace DLSLQueueingApp
             tm.Tick += new EventHandler(changeImage);
             tm.Start();
 
+            try
+            {
+                MySqlConnection connection = new MySqlConnection("server=localhost;user id=root; password=root; database=dlsl_app");
+                connection.Open();
+                if (connection.State == ConnectionState.Open)
+                {
+                    label1.Text = "connected";
+                    label1.ForeColor = Color.Green;
+                }
+                else
+                {
+                    label1.Text = "no";
+                    label1.ForeColor = Color.Red;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void changeImage(object sender, EventArgs e)
