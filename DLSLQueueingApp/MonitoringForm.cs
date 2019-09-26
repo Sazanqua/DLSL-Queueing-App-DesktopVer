@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace DLSLQueueingApp
         public MonitoringForm()
         {
             InitializeComponent();
+            
         }
 
         private void MonitoringForm_Load(object sender, EventArgs e)

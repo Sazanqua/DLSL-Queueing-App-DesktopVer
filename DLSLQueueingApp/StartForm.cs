@@ -24,6 +24,7 @@ namespace DLSLQueueingApp
         public StartForm()
         {
             InitializeComponent();
+    
             //String ConnectString = "server=localhost;user id=root;database=dlsl_app"; // Para magstart yung mysql
             //MySqlConnection con = new MySqlConnection("ConnectString");
 

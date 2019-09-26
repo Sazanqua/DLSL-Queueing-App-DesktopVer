@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace DLSLQueueingApp
 {
-    public partial class MonitorUserControl : UserControl
+    public partial class MonitorUserControl4 : UserControl
     {
         [System.Runtime.InteropServices.DllImport("gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -29,9 +29,7 @@ namespace DLSLQueueingApp
             base.OnCreateControl();
             Region = Region.FromHrgn(CreateRoundRectRgn(2, 3, Width, Height, 30, 30)); //play with these values till you are happy
         }
-
-
-        public MonitorUserControl()
+        public MonitorUserControl4()
         {
             InitializeComponent();
             cashierLabel.Text = "?";
@@ -39,7 +37,7 @@ namespace DLSLQueueingApp
             queueType.Text = "?";
 
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "SELECT * FROM cashier WHERE id=1";
+            String query = "SELECT * FROM cashier WHERE id=4";
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataReader dReader;
@@ -61,8 +59,6 @@ namespace DLSLQueueingApp
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
     }
 }

@@ -29,12 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonitoringForm));
+            this.monitorUserControl31 = new DLSLQueueingApp.MonitorUserControl3();
+            this.monitorUserControl4 = new DLSLQueueingApp.MonitorUserControl();
+            this.monitorUserControl21 = new DLSLQueueingApp.MonitorUserControl2();
             this.monitorUserControl1 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl2 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl3 = new DLSLQueueingApp.MonitorUserControl();
-            this.monitorUserControl4 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorMainUserControl1 = new DLSLQueueingApp.MonitorMainUserControl();
+            this.monitorUserControl41 = new DLSLQueueingApp.MonitorUserControl4();
             this.SuspendLayout();
+            // 
+            // monitorUserControl31
+            // 
+            this.monitorUserControl31.Location = new System.Drawing.Point(20, 660);
+            this.monitorUserControl31.Name = "monitorUserControl31";
+            this.monitorUserControl31.Size = new System.Drawing.Size(445, 350);
+            this.monitorUserControl31.TabIndex = 2;
+            // 
+            // monitorUserControl4
+            // 
+            this.monitorUserControl4.Location = new System.Drawing.Point(20, 297);
+            this.monitorUserControl4.Name = "monitorUserControl4";
+            this.monitorUserControl4.Size = new System.Drawing.Size(445, 350);
+            this.monitorUserControl4.TabIndex = 1;
+            // 
+            // monitorUserControl21
+            // 
+            this.monitorUserControl21.Location = new System.Drawing.Point(480, 297);
+            this.monitorUserControl21.Name = "monitorUserControl21";
+            this.monitorUserControl21.Size = new System.Drawing.Size(445, 350);
+            this.monitorUserControl21.TabIndex = 0;
             // 
             // monitorUserControl1
             // 
@@ -57,19 +81,19 @@
             this.monitorUserControl3.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl3.TabIndex = 6;
             // 
-            // monitorUserControl4
-            // 
-            this.monitorUserControl4.Location = new System.Drawing.Point(480, 297);
-            this.monitorUserControl4.Name = "monitorUserControl4";
-            this.monitorUserControl4.Size = new System.Drawing.Size(445, 350);
-            this.monitorUserControl4.TabIndex = 7;
-            // 
             // monitorMainUserControl1
             // 
             this.monitorMainUserControl1.Location = new System.Drawing.Point(975, 297);
             this.monitorMainUserControl1.Name = "monitorMainUserControl1";
             this.monitorMainUserControl1.Size = new System.Drawing.Size(885, 725);
             this.monitorMainUserControl1.TabIndex = 8;
+            // 
+            // monitorUserControl41
+            // 
+            this.monitorUserControl41.Location = new System.Drawing.Point(480, 660);
+            this.monitorUserControl41.Name = "monitorUserControl41";
+            this.monitorUserControl41.Size = new System.Drawing.Size(445, 350);
+            this.monitorUserControl41.TabIndex = 3;
             // 
             // MonitoringForm
             // 
@@ -78,11 +102,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.monitorMainUserControl1);
+            this.Controls.Add(this.monitorUserControl41);
+            this.Controls.Add(this.monitorUserControl31);
             this.Controls.Add(this.monitorUserControl4);
-            this.Controls.Add(this.monitorUserControl3);
-            this.Controls.Add(this.monitorUserControl2);
-            this.Controls.Add(this.monitorUserControl1);
+            this.Controls.Add(this.monitorUserControl21);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MonitoringForm";
@@ -97,7 +120,10 @@
         private MonitorUserControl monitorUserControl1;
         private MonitorUserControl monitorUserControl2;
         private MonitorUserControl monitorUserControl3;
-        private MonitorUserControl monitorUserControl4;
         private MonitorMainUserControl monitorMainUserControl1;
+        private MonitorUserControl2 monitorUserControl21;
+        private MonitorUserControl monitorUserControl4;
+        private MonitorUserControl3 monitorUserControl31;
+        private MonitorUserControl4 monitorUserControl41;
     }
 }
