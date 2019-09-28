@@ -32,9 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm2_2));
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.ticketForm2_2BackBtn = new System.Windows.Forms.Button();
-            this.studentNumberTxtbox = new DLSLQueueingApp.TextBoxCircular();
-            this.passwordTxtbox = new DLSLQueueingApp.TextBoxCircular();
+            this.studentNumber_Panel = new System.Windows.Forms.Panel();
+            this.studentNumber_Txtbx = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.password_Panel = new System.Windows.Forms.Panel();
+            this.Password_Txtbx = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ticketForm2_2LoginBtn = new DLSLQueueingApp.CircularButton();
+            this.studentNumber_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.password_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // animationTimer
@@ -54,36 +66,98 @@
             this.ticketForm2_2BackBtn.TabIndex = 10;
             this.ticketForm2_2BackBtn.Text = "⮜- BACK";
             this.ticketForm2_2BackBtn.UseVisualStyleBackColor = true;
+            this.ticketForm2_2BackBtn.Click += new System.EventHandler(this.ticketForm2_2BackBtn_Click);
             // 
-            // studentNumberTxtbox
+            // studentNumber_Panel
             // 
-            this.studentNumberTxtbox.BackColor = System.Drawing.SystemColors.Window;
-            this.studentNumberTxtbox.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentNumberTxtbox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.studentNumberTxtbox.Location = new System.Drawing.Point(520, 550);
-            this.studentNumberTxtbox.MaxLength = 10;
-            this.studentNumberTxtbox.Name = "studentNumberTxtbox";
-            this.studentNumberTxtbox.Size = new System.Drawing.Size(800, 118);
-            this.studentNumberTxtbox.TabIndex = 11;
-            this.studentNumberTxtbox.Text = "Student Number";
-            this.studentNumberTxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.studentNumberTxtbox.Enter += new System.EventHandler(this.studentNumberTxtbox_Enter);
-            this.studentNumberTxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.studentNumberTxtbox_KeyPress);
-            this.studentNumberTxtbox.Leave += new System.EventHandler(this.studentNumberTxtbox_Leave);
+            this.studentNumber_Panel.Controls.Add(this.studentNumber_Txtbx);
+            this.studentNumber_Panel.Controls.Add(this.pictureBox2);
+            this.studentNumber_Panel.Controls.Add(this.pictureBox1);
+            this.studentNumber_Panel.Location = new System.Drawing.Point(520, 550);
+            this.studentNumber_Panel.Name = "studentNumber_Panel";
+            this.studentNumber_Panel.Size = new System.Drawing.Size(900, 155);
+            this.studentNumber_Panel.TabIndex = 15;
             // 
-            // passwordTxtbox
+            // studentNumber_Txtbx
             // 
-            this.passwordTxtbox.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxtbox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordTxtbox.Location = new System.Drawing.Point(520, 750);
-            this.passwordTxtbox.MaxLength = 12;
-            this.passwordTxtbox.Name = "passwordTxtbox";
-            this.passwordTxtbox.Size = new System.Drawing.Size(800, 118);
-            this.passwordTxtbox.TabIndex = 13;
-            this.passwordTxtbox.Text = "Password";
-            this.passwordTxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.passwordTxtbox.Enter += new System.EventHandler(this.passwordTxtbox_Enter);
-            this.passwordTxtbox.Leave += new System.EventHandler(this.passwordTxtbox_Leave);
+            this.studentNumber_Txtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentNumber_Txtbx.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentNumber_Txtbx.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.studentNumber_Txtbx.Location = new System.Drawing.Point(159, 51);
+            this.studentNumber_Txtbx.MaxLength = 10;
+            this.studentNumber_Txtbx.Name = "studentNumber_Txtbx";
+            this.studentNumber_Txtbx.Size = new System.Drawing.Size(588, 69);
+            this.studentNumber_Txtbx.TabIndex = 2;
+            this.studentNumber_Txtbx.Text = "Student Number";
+            this.studentNumber_Txtbx.Enter += new System.EventHandler(this.studentNumber_Txtbx_Enter);
+            this.studentNumber_Txtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.studentNumber_Txtbx_KeyPress);
+            this.studentNumber_Txtbx.Leave += new System.EventHandler(this.studentNumber_Txtbx_Leave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(50, 40);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 118);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // password_Panel
+            // 
+            this.password_Panel.Controls.Add(this.Password_Txtbx);
+            this.password_Panel.Controls.Add(this.pictureBox3);
+            this.password_Panel.Controls.Add(this.pictureBox4);
+            this.password_Panel.Location = new System.Drawing.Point(520, 750);
+            this.password_Panel.Name = "password_Panel";
+            this.password_Panel.Size = new System.Drawing.Size(900, 155);
+            this.password_Panel.TabIndex = 16;
+            // 
+            // Password_Txtbx
+            // 
+            this.Password_Txtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Password_Txtbx.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Txtbx.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Password_Txtbx.Location = new System.Drawing.Point(159, 51);
+            this.Password_Txtbx.MaxLength = 15;
+            this.Password_Txtbx.Name = "Password_Txtbx";
+            this.Password_Txtbx.Size = new System.Drawing.Size(588, 69);
+            this.Password_Txtbx.TabIndex = 2;
+            this.Password_Txtbx.Text = "Password";
+            this.Password_Txtbx.Enter += new System.EventHandler(this.Password_Txtbx_Enter);
+            this.Password_Txtbx.Leave += new System.EventHandler(this.Password_Txtbx_Leave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(50, 40);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 90);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(800, 118);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // ticketForm2_2LoginBtn
             // 
@@ -95,6 +169,7 @@
             this.ticketForm2_2LoginBtn.TabIndex = 14;
             this.ticketForm2_2LoginBtn.Text = "LOGIN";
             this.ticketForm2_2LoginBtn.UseVisualStyleBackColor = true;
+            this.ticketForm2_2LoginBtn.Click += new System.EventHandler(this.ticketForm2_2LoginBtn_Click);
             // 
             // TicketForm2_2
             // 
@@ -103,9 +178,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.Controls.Add(this.password_Panel);
+            this.Controls.Add(this.studentNumber_Panel);
             this.Controls.Add(this.ticketForm2_2LoginBtn);
-            this.Controls.Add(this.passwordTxtbox);
-            this.Controls.Add(this.studentNumberTxtbox);
             this.Controls.Add(this.ticketForm2_2BackBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -113,8 +188,15 @@
             this.Name = "TicketForm2_2";
             this.Text = "DLSL Queueing App";
             this.Load += new System.EventHandler(this.TicketForm2_2_Load);
+            this.studentNumber_Panel.ResumeLayout(false);
+            this.studentNumber_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.password_Panel.ResumeLayout(false);
+            this.password_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -122,8 +204,14 @@
 
         private System.Windows.Forms.Timer animationTimer;
         private System.Windows.Forms.Button ticketForm2_2BackBtn;
-        private TextBoxCircular studentNumberTxtbox;
-        private TextBoxCircular passwordTxtbox;
         private CircularButton ticketForm2_2LoginBtn;
+        private System.Windows.Forms.Panel studentNumber_Panel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox studentNumber_Txtbx;
+        private System.Windows.Forms.Panel password_Panel;
+        private System.Windows.Forms.TextBox Password_Txtbx;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

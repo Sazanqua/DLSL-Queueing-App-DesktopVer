@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,8 +28,8 @@ namespace DLSLQueueingApp
             WindowState = FormWindowState.Maximized; // Para fullscreen
         
             ticketForm2_2BackBtn.BackColor = ColorTranslator.FromHtml("#21282E");
-            studentNumberTxtbox.BackColor = ColorTranslator.FromHtml("#21282E");
-            passwordTxtbox.BackColor = ColorTranslator.FromHtml("#21282E");
+            studentNumber_Panel.BackColor = ColorTranslator.FromHtml("#21282E");
+            password_Panel.BackColor = ColorTranslator.FromHtml("#21282E");
             ticketForm2_2LoginBtn.BackColor = ColorTranslator.FromHtml("#21282E");
         }
 
@@ -44,56 +45,105 @@ namespace DLSLQueueingApp
             }
         }
 
-        private void studentNumberTxtbox_Enter(object sender, EventArgs e)
+        private void ticketForm2_2BackBtn_Click(object sender, EventArgs e)
         {
-            if (studentNumberTxtbox.Text == "Student Number")
+            TicketForm tf = new TicketForm();
+            tf.ShowDialog();
+            Close();
+        }
+
+        private void studentNumber_Txtbx_Enter(object sender, EventArgs e)
+        {
+            if (studentNumber_Txtbx.Text == "Student Number")
             {
-                studentNumberTxtbox.Text = "";
-                studentNumberTxtbox.ForeColor = Color.Black;
+                studentNumber_Txtbx.Text = "";
+                studentNumber_Txtbx.ForeColor = Color.Black;
             }
         }
 
-        private void studentNumberTxtbox_Leave(object sender, EventArgs e)
+        private void studentNumber_Txtbx_Leave(object sender, EventArgs e)
         {
-            if (studentNumberTxtbox.Text == "")
+            if (studentNumber_Txtbx.Text == "")
             {
-                studentNumberTxtbox.Text = "Student Number";
-                studentNumberTxtbox.ForeColor = Color.Silver;
+                studentNumber_Txtbx.Text = "Student Number";
+                studentNumber_Txtbx.ForeColor = Color.Silver;
             }
         }
 
-        private void passwordTxtbox_Enter(object sender, EventArgs e)
+        private void Password_Txtbx_Enter(object sender, EventArgs e)
         {
-            if (passwordTxtbox.Text == "Password")
+            if (Password_Txtbx.Text == "Password")
             {
-                passwordTxtbox.Text = "";
-                passwordTxtbox.ForeColor = Color.Black;
-                passwordTxtbox.UseSystemPasswordChar = true;
+                Password_Txtbx.Text = "";
+                Password_Txtbx.ForeColor = Color.Black;
+                Password_Txtbx.UseSystemPasswordChar = true;
             }
         }
 
-        private void passwordTxtbox_Leave(object sender, EventArgs e)
+        private void Password_Txtbx_Leave(object sender, EventArgs e)
         {
-            if (passwordTxtbox.Text == "")
+            if (Password_Txtbx.Text == "")
             {
-                passwordTxtbox.Text = "Password";
-                passwordTxtbox.ForeColor = Color.Silver;
-                passwordTxtbox.UseSystemPasswordChar = false;
+                Password_Txtbx.Text = "Password";
+                Password_Txtbx.ForeColor = Color.Silver;
+                Password_Txtbx.UseSystemPasswordChar = false;
             }
         }
 
-        private void studentNumberTxtbox_KeyPress(object sender, KeyPressEventArgs e)
+        private void studentNumber_Txtbx_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // Para numeric value lang sa student number textbox
             {
                 e.Handled = true;
             }
+        }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+        private void ticketForm2_2LoginBtn_Click(object sender, EventArgs e)
+        {
+            if (studentNumber_Txtbx.Text == "Student Number" && Password_Txtbx.Text == "Password")
             {
-                e.Handled = true;
+                MessageBox.Show("STUDENT NUMBER OR PASSWORD CANNOT BE BLANKED!");
+            }
+
+            else if (studentNumber_Txtbx.Text == "Student Number")
+            {
+                MessageBox.Show("STUDENT NUMBER CANNOT BE BLANKED!");
+            }
+
+            else if (Password_Txtbx.Text == "Password")
+            {
+                MessageBox.Show("PASSWORD CANNOT BE BLANKED!");
+            }
+            else
+            {
+                String studentNumber_value = studentNumber_Txtbx.Text;
+                String password_value = Password_Txtbx.Text;
+                String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
+                String query = "SELECT * FROM users WHERE student_number ='" + studentNumber_value + "'";
+                MySqlConnection con = new MySqlConnection(connection);
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader dReader;
+                try
+                {
+                    con.Open();
+                    dReader = cmd.ExecuteReader();
+                    while (dReader.Read())
+                    {
+                        String studentNumber = dReader.GetString("student_number");
+                        if (studentNumber == studentNumber_value)
+                        {
+                            MessageBox.Show("yes");
+                        }
+                        else
+                        {
+                            MessageBox.Show("AAAAAAAAAAAAAAAA");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
