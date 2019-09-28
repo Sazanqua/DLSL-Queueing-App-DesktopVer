@@ -12,22 +12,21 @@ namespace DLSLQueueingApp
 {
     public partial class Page3 : UserControl
     {
-        public Page4 Page4 { get; set; }
-
-        private static Page2 _instance; // New page
-        public static Page2 Instance // New page
+        public static Page3 _instance; // New page
+        public static Page3 Instance // New page
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new Page2();
+                    _instance = new Page3();
                 }
                 return _instance;
             }
         }
-
-
+        public Page4 Page4 { get; set; }
+        public Panel pagePanel { get; set; }
+        
         public Page3()
         {
             InitializeComponent();
@@ -46,12 +45,12 @@ namespace DLSLQueueingApp
 
         private void page3BackBtn_Click_1(object sender, EventArgs e)
         {
-            SendToBack();
+            
         }
 
         private void normalLaneBtn_Click(object sender, EventArgs e)
         {
-            Page4?.BringToFront();
+            
         }
     }
 }

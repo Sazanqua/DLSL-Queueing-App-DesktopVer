@@ -39,8 +39,8 @@ namespace DLSLQueueingApp
 
         private void ticketBtn_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
-            f1.ShowDialog();
+            TicketForm tf = new TicketForm();
+            tf.ShowDialog();
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
