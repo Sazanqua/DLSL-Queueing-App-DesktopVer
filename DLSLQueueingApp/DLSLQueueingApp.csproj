@@ -151,17 +151,29 @@
     <Compile Include="TicketForm2_2_1.Designer.cs">
       <DependentUpon>TicketForm2_2_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketForm3_1.cs">
+    <Compile Include="TicketForm2_2_1_1NormalLane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicketForm3_1.Designer.cs">
-      <DependentUpon>TicketForm3_1.cs</DependentUpon>
+    <Compile Include="TicketForm2_2_1_1NormalLane.Designer.cs">
+      <DependentUpon>TicketForm2_2_1_1NormalLane.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketForm3_2.cs">
+    <Compile Include="TicketForm2_2_1_2PriorityLane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicketForm3_2.Designer.cs">
-      <DependentUpon>TicketForm3_2.cs</DependentUpon>
+    <Compile Include="TicketForm2_2_1_2PriorityLane.Designer.cs">
+      <DependentUpon>TicketForm2_2_1_2PriorityLane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm3_1_NormalLane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm3_1_NormalLane.Designer.cs">
+      <DependentUpon>TicketForm3_1_NormalLane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm3_2_PriorityLane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm3_2_PriorityLane.Designer.cs">
+      <DependentUpon>TicketForm3_2_PriorityLane.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DesktopAppForm.resx">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
@@ -221,11 +233,17 @@
     <EmbeddedResource Include="TicketForm2_2_1.resx">
       <DependentUpon>TicketForm2_2_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketForm3_1.resx">
-      <DependentUpon>TicketForm3_1.cs</DependentUpon>
+    <EmbeddedResource Include="TicketForm2_2_1_1NormalLane.resx">
+      <DependentUpon>TicketForm2_2_1_1NormalLane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketForm3_2.resx">
-      <DependentUpon>TicketForm3_2.cs</DependentUpon>
+    <EmbeddedResource Include="TicketForm2_2_1_2PriorityLane.resx">
+      <DependentUpon>TicketForm2_2_1_2PriorityLane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm3_1_NormalLane.resx">
+      <DependentUpon>TicketForm3_1_NormalLane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm3_2_PriorityLane.resx">
+      <DependentUpon>TicketForm3_2_PriorityLane.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

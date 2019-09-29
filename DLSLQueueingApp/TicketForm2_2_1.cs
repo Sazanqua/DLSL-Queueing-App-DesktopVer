@@ -54,12 +54,16 @@ namespace DLSLQueueingApp
 
         private void mobileQueue_NormalLaneBtn_Click(object sender, EventArgs e)
         {
-
+            TicketForm2_2_1_1NormalLane tf2_2_1_1 = new TicketForm2_2_1_1NormalLane();
+            tf2_2_1_1.ShowDialog();
+            Close();
         }
 
         private void mobileQueue_PriorityLaneBtn_Click(object sender, EventArgs e)
         {
-
+            TicketForm2_2_1_2PriorityLane tf2_2_1_2 = new TicketForm2_2_1_2PriorityLane();
+            tf2_2_1_2.ShowDialog();
+            Close();
         }
 
         

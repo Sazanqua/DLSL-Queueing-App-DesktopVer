@@ -54,14 +54,14 @@ namespace DLSLQueueingApp
 
         private void normalLaneBtn_Click(object sender, EventArgs e)
         {
-            TicketForm3_1 tf3_1 = new TicketForm3_1();
+            TicketForm3_1_NormalLane tf3_1 = new TicketForm3_1_NormalLane();
             tf3_1.ShowDialog();
             Close();
         }
 
         private void priorityLaneBtn_Click(object sender, EventArgs e)
         {
-            TicketForm3_2 tf3_2 = new TicketForm3_2();
+            TicketForm3_2_PriorityLane tf3_2 = new TicketForm3_2_PriorityLane();
             tf3_2.ShowDialog();
             Close();
         }

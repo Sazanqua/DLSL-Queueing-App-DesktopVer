@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DLSLQueueingApp
 {
-    public partial class TicketForm3_2 : Form
+    public partial class TicketForm3_2_PriorityLane : Form
     {
-        public TicketForm3_2()
+        public TicketForm3_2_PriorityLane()
         {
             InitializeComponent();
         }

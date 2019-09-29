@@ -1,6 +1,6 @@
 ﻿namespace DLSLQueueingApp
 {
-    partial class TicketForm3_2
+    partial class TicketForm3_2_PriorityLane
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm3_2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm3_2_PriorityLane));
             this.ticketForm3_2BackBtn = new System.Windows.Forms.Button();
             this.ticketForm3_2CollegeBtn = new DLSLQueueingApp.CircularButton();
             this.ticketForm3_2OthersBtn = new DLSLQueueingApp.CircularButton();

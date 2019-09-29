@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DLSLQueueingApp
 {
-    public partial class TicketForm3_1 : Form
+    public partial class TicketForm2_2_1_2PriorityLane : Form
     {
-        public TicketForm3_1()
+        public TicketForm2_2_1_2PriorityLane()
         {
             InitializeComponent();
         }
 
-        private void TicketForm3_1_Load(object sender, EventArgs e)
+        private void TicketForm2_2_1_2PriorityLane_Load(object sender, EventArgs e)
         {
             Opacity = 0.1; // Form Animation
             animationTimer.Start(); // Form Animation
@@ -26,9 +26,9 @@ namespace DLSLQueueingApp
             FormBorderStyle = FormBorderStyle.None; // Para fullscreen
             WindowState = FormWindowState.Maximized; // Para fullscreen
 
-            ticketForm3_1BackBtn.BackColor = ColorTranslator.FromHtml("#21282E");
-            ticketForm3_1CollegeBtn.BackColor = ColorTranslator.FromHtml("#21282E");
-            ticketForm3_1OthersBtn.BackColor = ColorTranslator.FromHtml("#21282E");
+            ticketForm2_2_1_2BackBtn.BackColor = ColorTranslator.FromHtml("#21282E");
+            ticketForm2_2_1_2CollegeBtn.BackColor = ColorTranslator.FromHtml("#21282E");
+            ticketForm2_2_1_2OthersBtn.BackColor = ColorTranslator.FromHtml("#21282E");
         }
 
         private void animationTimer_Tick(object sender, EventArgs e)
@@ -43,23 +43,21 @@ namespace DLSLQueueingApp
             }
         }
 
-        private void ticketForm3_1BackBtn_Click(object sender, EventArgs e)
+        private void ticketForm2_2_1_2BackBtn_Click(object sender, EventArgs e)
         {
-            TicketForm2_1 tf2_1 = new TicketForm2_1();
-            tf2_1.ShowDialog();
+            TicketForm2_2_1 tf2_2_1 = new TicketForm2_2_1();
+            tf2_2_1.ShowDialog();
             Close();
         }
 
-        private void ticketForm3_1CollegeBtn_Click(object sender, EventArgs e)
+        private void ticketForm2_2_1_2CollegeBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ticketForm3_1OthersBtn_Click(object sender, EventArgs e)
+        private void ticketForm2_2_1_2OthersBtn_Click(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }
