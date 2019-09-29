@@ -130,19 +130,41 @@ namespace DLSLQueueingApp
                     while (dReader.Read())
                     {
                         String studentNumber = dReader.GetString("student_number");
-                        if (studentNumber == studentNumber_value)
+                    }
+                    if (dReader.HasRows)
+                    {
+                        dReader.Close();
+                        String query2 = "SELECT student_number, password FROM users WHERE student_number ='" + studentNumber_value + "' AND password = '" + password_value + "'";
+                        
+                        MySqlCommand cmd2 = new MySqlCommand(query2, con);
+                        MySqlDataReader dReader2;
+                        dReader2 = cmd2.ExecuteReader();
+                        while (dReader2.Read())
                         {
-                            MessageBox.Show("yes");
+                            String studentNumber = dReader2.GetString("student_number");
+                            String password = dReader2.GetString("password");
+                        }
+                        if (dReader2.HasRows)
+                        {
+                            MessageBox.Show("LOGGING IN!");
                         }
                         else
                         {
-                            MessageBox.Show("AAAAAAAAAAAAAAAA");
+                            MessageBox.Show("INVALID CREDENTIALS!");
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("INVALID CREDENTIALS!");
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
         }
