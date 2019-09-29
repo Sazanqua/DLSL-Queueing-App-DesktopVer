@@ -147,6 +147,9 @@ namespace DLSLQueueingApp
                         if (dReader2.HasRows)
                         {
                             MessageBox.Show("LOGGING IN!");
+                            TicketForm2_2_1 tf2_2_1 = new TicketForm2_2_1();
+                            tf2_2_1.ShowDialog();
+                            Close();
                         }
                         else
                         {

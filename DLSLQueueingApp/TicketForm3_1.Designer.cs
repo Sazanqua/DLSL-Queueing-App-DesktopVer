@@ -91,6 +91,7 @@
             this.Controls.Add(this.ticketForm3_1CollegeBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TicketForm3_1";
             this.Text = "DLSL Queueing App";
             this.Load += new System.EventHandler(this.TicketForm3_1_Load);

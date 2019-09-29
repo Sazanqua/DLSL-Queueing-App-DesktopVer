@@ -44,3 +44,5 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm2_1.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm2_2.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm3_1.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm3_2.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm2_2_1.resources

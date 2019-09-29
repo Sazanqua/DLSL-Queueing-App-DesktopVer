@@ -145,11 +145,23 @@
     <Compile Include="TicketForm2_2.Designer.cs">
       <DependentUpon>TicketForm2_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketForm2_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm2_2_1.Designer.cs">
+      <DependentUpon>TicketForm2_2_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketForm3_1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TicketForm3_1.Designer.cs">
       <DependentUpon>TicketForm3_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm3_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm3_2.Designer.cs">
+      <DependentUpon>TicketForm3_2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DesktopAppForm.resx">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
@@ -206,8 +218,14 @@
     <EmbeddedResource Include="TicketForm2_2.resx">
       <DependentUpon>TicketForm2_2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm2_2_1.resx">
+      <DependentUpon>TicketForm2_2_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TicketForm3_1.resx">
       <DependentUpon>TicketForm3_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm3_2.resx">
+      <DependentUpon>TicketForm3_2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

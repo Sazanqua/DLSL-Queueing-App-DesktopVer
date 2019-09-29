@@ -75,6 +75,7 @@
             this.priorityLaneBtn.TabIndex = 11;
             this.priorityLaneBtn.Text = "PRIORITY LANE";
             this.priorityLaneBtn.UseVisualStyleBackColor = true;
+            this.priorityLaneBtn.Click += new System.EventHandler(this.priorityLaneBtn_Click);
             // 
             // animationTimer
             // 
