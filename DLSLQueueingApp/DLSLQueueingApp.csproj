@@ -175,6 +175,12 @@
     <Compile Include="TicketForm3_2_PriorityLane.Designer.cs">
       <DependentUpon>TicketForm3_2_PriorityLane.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketForm4_1NormalTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_1NormalTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_1NormalTicketPrinting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DesktopAppForm.resx">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketForm3_2_PriorityLane.resx">
       <DependentUpon>TicketForm3_2_PriorityLane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_1NormalTicketPrinting.resx">
+      <DependentUpon>TicketForm4_1NormalTicketPrinting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
