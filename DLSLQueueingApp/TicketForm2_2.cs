@@ -137,15 +137,19 @@ namespace DLSLQueueingApp
                         String query2 = "SELECT student_number, password FROM users WHERE student_number ='" + studentNumber_value + "' AND password = '" + password_value + "'";
                         
                         MySqlCommand cmd2 = new MySqlCommand(query2, con);
-                        MySqlDataReader dReader2;
-                        dReader2 = cmd2.ExecuteReader();
-                        while (dReader2.Read())
+                        dReader = cmd2.ExecuteReader();
+                        while (dReader.Read())
                         {
-                            String studentNumber = dReader2.GetString("student_number");
-                            String password = dReader2.GetString("password");
+                            String studentNumber = dReader.GetString("student_number");
+                            String password = dReader.GetString("password");
                         }
-                        if (dReader2.HasRows)
+                        if (dReader.HasRows)
                         {
+                            dReader.Close();
+                            String query3 = "UPDATE users SET currently_queueing = 'YES' WHERE student_number = '" + studentNumber_value + "'; ";
+                            MySqlCommand cmd3 = new MySqlCommand(query3, con);
+                            dReader = cmd3.ExecuteReader();
+
                             MessageBox.Show("LOGGING IN!");
                             TicketForm2_2_1 tf2_2_1 = new TicketForm2_2_1();
                             tf2_2_1.ShowDialog();

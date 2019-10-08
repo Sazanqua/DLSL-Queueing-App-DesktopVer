@@ -18,10 +18,13 @@ namespace DLSLQueueingApp
             InitializeComponent();
         }
 
-        int idHolder;
-        int queueNoHolder;
-        int numberOfQueueCashier1;
-        int numberOfQueueCashier2;
+        public int idHolder;
+        public static int queueNoHolder;
+        public static int numberOfQueueCashier1;
+        public static int numberOfQueueCashier2;
+        public static int numberOfQueueCashier3;
+        public static int numberOfQueueCashier4;
+
         private void TicketForm3_1_Load(object sender, EventArgs e)
         {
             Opacity = 0.1; // Form Animation
@@ -75,7 +78,24 @@ namespace DLSLQueueingApp
                 {
                     numberOfQueueCashier2 = dReader.GetInt32("number_of_queue");
                 }
-                //MessageBox.Show(numberOfQueueCashier2.ToString());
+
+                dReader.Close();
+                String query5 = "SELECT number_of_queue FROM cashier where cashier_number =3;";
+                MySqlCommand cmd5 = new MySqlCommand(query5, con);
+                dReader = cmd5.ExecuteReader();
+                while (dReader.Read())
+                {
+                    numberOfQueueCashier3 = dReader.GetInt32("number_of_queue");
+                }
+
+                dReader.Close();
+                String query6 = "SELECT number_of_queue FROM cashier where cashier_number =4;";
+                MySqlCommand cmd6 = new MySqlCommand(query6, con);
+                dReader = cmd6.ExecuteReader();
+                while (dReader.Read())
+                {
+                    numberOfQueueCashier4 = dReader.GetInt32("number_of_queue");
+                }
 
                 con.Close();
             }
@@ -118,7 +138,8 @@ namespace DLSLQueueingApp
                 if(numberOfQueueCashier1 == numberOfQueueCashier2 || numberOfQueueCashier1 < numberOfQueueCashier2)
                 {
                     numberOfQueueCashier1++;
-                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + queueNoHolder + "', '1', 'PENDING', 'COLLEGE', 'NORMAL')";
+                    numberOfQueueCashier2 = 0;
+                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + numberOfQueueCashier1 + "', '1', 'PENDING', 'COLLEGE', 'NORMAL')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     dReader = cmd.ExecuteReader();
                     dReader.Close();
@@ -129,7 +150,8 @@ namespace DLSLQueueingApp
                 else if(numberOfQueueCashier1 > numberOfQueueCashier2)
                 {
                     numberOfQueueCashier2++;
-                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + queueNoHolder + "', '2', 'PENDING', 'COLLEGE', 'NORMAL')";
+                    numberOfQueueCashier1 = 0;
+                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + numberOfQueueCashier2 + "', '2', 'PENDING', 'COLLEGE', 'NORMAL')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     dReader = cmd.ExecuteReader();
                     dReader.Close();
@@ -137,6 +159,7 @@ namespace DLSLQueueingApp
                     MySqlCommand cmd3 = new MySqlCommand(query3, con);
                     dReader = cmd3.ExecuteReader();
                 }
+
                 TicketForm4_1NormalTicketPrinting tf4_1 = new TicketForm4_1NormalTicketPrinting();
                 tf4_1.ShowDialog();
                 Close();
@@ -150,7 +173,48 @@ namespace DLSLQueueingApp
 
         private void ticketForm3_1OthersBtn_Click(object sender, EventArgs e)
         {
+            idHolder++;
+            queueNoHolder++;
 
+            String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
+            MySqlConnection con = new MySqlConnection(connection);
+            MySqlDataReader dReader;
+            try
+            {
+                con.Open();
+                if (numberOfQueueCashier3 == numberOfQueueCashier4 || numberOfQueueCashier3 < numberOfQueueCashier4)
+                {
+                    numberOfQueueCashier3++;
+                    numberOfQueueCashier4 = 0;
+                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + numberOfQueueCashier3 + "', '3', 'PENDING', 'OTHERS', 'NORMAL')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    dReader = cmd.ExecuteReader();
+                    dReader.Close();
+                    String query2 = "UPDATE cashier SET number_of_queue = '" + numberOfQueueCashier3 + "' WHERE cashier_number=3";
+                    MySqlCommand cmd2 = new MySqlCommand(query2, con);
+                    dReader = cmd2.ExecuteReader();
+                }
+                else if (numberOfQueueCashier3 > numberOfQueueCashier4)
+                {
+                    numberOfQueueCashier4++;
+                    numberOfQueueCashier3 = 0;
+                    String query = "INSERT INTO service_manual (id, queue_no, cashier_number, queueing_status, service_type ,service_lane) VALUES('" + idHolder + "', '" + numberOfQueueCashier4 + "', '4', 'PENDING', 'OTHERS', 'NORMAL')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    dReader = cmd.ExecuteReader();
+                    dReader.Close();
+                    String query3 = "UPDATE cashier SET number_of_queue = '" + numberOfQueueCashier4 + "' WHERE cashier_number=4";
+                    MySqlCommand cmd3 = new MySqlCommand(query3, con);
+                    dReader = cmd3.ExecuteReader();
+                }
+
+                TicketForm4_2OtherTicketPrinting tf4_2 = new TicketForm4_2OtherTicketPrinting();
+                tf4_2.ShowDialog();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         

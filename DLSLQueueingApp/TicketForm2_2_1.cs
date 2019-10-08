@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,15 @@ namespace DLSLQueueingApp
 
         private void ticketForm2_2_1LogoutBtn_Click(object sender, EventArgs e)
         {
+            String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
+            String query = "UPDATE users SET currently_queueing = 'NO' WHERE currently_queueing = 'YES'; ";
+            MySqlConnection con = new MySqlConnection(connection);
+            MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlDataReader dReader;
+            con.Open();
+            dReader = cmd.ExecuteReader();
+            dReader.Close();
+
             TicketForm2_2 tf2_2 = new TicketForm2_2();
             tf2_2.ShowDialog();
             Close();

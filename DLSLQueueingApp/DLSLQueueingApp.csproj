@@ -181,6 +181,48 @@
     <Compile Include="TicketForm4_1NormalTicketPrinting.Designer.cs">
       <DependentUpon>TicketForm4_1NormalTicketPrinting.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketForm4_2OtherTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_2OtherTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_2OtherTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_3PriorityTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_3PriorityTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_3PriorityTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_4PriorityOtherTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_4PriorityOtherTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_4PriorityOtherTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_NormalCollegeTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_NormalCollegeTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_Mobile_NormalCollegeTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_NormalOthersTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_NormalOthersTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_Mobile_NormalOthersTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_PriorityCollegeTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_PriorityCollegeTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_Mobile_PriorityCollegeTicketPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_PriorityOthersTicketPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm4_Mobile_PriorityOthersTicketPrinting.Designer.cs">
+      <DependentUpon>TicketForm4_Mobile_PriorityOthersTicketPrinting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DesktopAppForm.resx">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +295,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketForm4_1NormalTicketPrinting.resx">
       <DependentUpon>TicketForm4_1NormalTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_2OtherTicketPrinting.resx">
+      <DependentUpon>TicketForm4_2OtherTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_3PriorityTicketPrinting.resx">
+      <DependentUpon>TicketForm4_3PriorityTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_4PriorityOtherTicketPrinting.resx">
+      <DependentUpon>TicketForm4_4PriorityOtherTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_Mobile_NormalCollegeTicketPrinting.resx">
+      <DependentUpon>TicketForm4_Mobile_NormalCollegeTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_Mobile_NormalOthersTicketPrinting.resx">
+      <DependentUpon>TicketForm4_Mobile_NormalOthersTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_Mobile_PriorityCollegeTicketPrinting.resx">
+      <DependentUpon>TicketForm4_Mobile_PriorityCollegeTicketPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm4_Mobile_PriorityOthersTicketPrinting.resx">
+      <DependentUpon>TicketForm4_Mobile_PriorityOthersTicketPrinting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

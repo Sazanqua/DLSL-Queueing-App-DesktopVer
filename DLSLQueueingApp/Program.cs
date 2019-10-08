@@ -16,7 +16,7 @@ namespace DLSLQueueingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TicketForm3_1_NormalLane());
+            Application.Run(new TicketForm());
         }
     }
 }
