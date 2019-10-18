@@ -56,6 +56,36 @@
     <Compile Include="DesktopAppForm.Designer.cs">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DesktopAppFormPopupMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopAppFormPopupMessage.Designer.cs">
+      <DependentUpon>DesktopAppFormPopupMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueingForm.Designer.cs">
+      <DependentUpon>QueueingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueingForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueingForm2.Designer.cs">
+      <DependentUpon>QueueingForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueingForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueingForm3.Designer.cs">
+      <DependentUpon>QueueingForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueingForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueingForm4.Designer.cs">
+      <DependentUpon>QueueingForm4.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +255,21 @@
     </Compile>
     <EmbeddedResource Include="DesktopAppForm.resx">
       <DependentUpon>DesktopAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopAppFormPopupMessage.resx">
+      <DependentUpon>DesktopAppFormPopupMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueingForm.resx">
+      <DependentUpon>QueueingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueingForm2.resx">
+      <DependentUpon>QueueingForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueingForm3.resx">
+      <DependentUpon>QueueingForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueingForm4.resx">
+      <DependentUpon>QueueingForm4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>

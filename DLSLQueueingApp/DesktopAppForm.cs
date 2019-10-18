@@ -63,5 +63,11 @@ namespace DLSLQueueingApp
             MonitoringForm mf = new MonitoringForm();
             mf.ShowDialog();
         }
+
+        private void queueingBtn_Click(object sender, EventArgs e)
+        {
+            DesktopAppFormPopupMessage dafp = new DesktopAppFormPopupMessage();
+            dafp.ShowDialog();
+        }
     }
 }

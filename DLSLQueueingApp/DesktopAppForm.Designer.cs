@@ -48,6 +48,7 @@
             this.queueingBtn.TabIndex = 8;
             this.queueingBtn.Text = "QUEUEING";
             this.queueingBtn.UseVisualStyleBackColor = false;
+            this.queueingBtn.Click += new System.EventHandler(this.queueingBtn_Click);
             // 
             // monitoringBtn
             // 

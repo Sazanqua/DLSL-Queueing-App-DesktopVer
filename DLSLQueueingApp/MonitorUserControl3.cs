@@ -37,7 +37,7 @@ namespace DLSLQueueingApp
             queueType.Text = "?";
 
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "SELECT * FROM cashier WHERE id=3";
+            String query = "SELECT * FROM cashier WHERE cashier_number=3";
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataReader dReader;

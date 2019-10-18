@@ -56,3 +56,8 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm4_Mobile_NormalOthersTicketPrinting.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm4_Mobile_PriorityCollegeTicketPrinting.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm4_Mobile_PriorityOthersTicketPrinting.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.DesktopAppFormPopupMessage.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm2.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm3.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm4.resources
