@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonitoringForm));
             this.monitorUserControl31 = new DLSLQueueingApp.MonitorUserControl3();
             this.monitorUserControl4 = new DLSLQueueingApp.MonitorUserControl();
@@ -37,6 +38,7 @@
             this.monitorUserControl3 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorMainUserControl1 = new DLSLQueueingApp.MonitorMainUserControl();
             this.monitorUserControl41 = new DLSLQueueingApp.MonitorUserControl4();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // monitorUserControl31
@@ -95,6 +97,11 @@
             this.monitorUserControl41.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl41.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 60000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MonitoringForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -125,5 +132,6 @@
         private MonitorUserControl monitorUserControl4;
         private MonitorUserControl3 monitorUserControl31;
         private MonitorUserControl4 monitorUserControl41;
+        private System.Windows.Forms.Timer timer1;
     }
 }

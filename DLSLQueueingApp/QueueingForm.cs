@@ -18,6 +18,7 @@ namespace DLSLQueueingApp
             InitializeComponent();
         }
         int queueno;
+        int queueno_temp;
         private void QueueingForm_Load(object sender, EventArgs e)
         {
             MaximizeBox = false; // Disable Maximize button
@@ -71,6 +72,7 @@ namespace DLSLQueueingApp
             else
             {
                 queueno = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value.ToString());
+                queueno_temp = queueno;
             }
         }
 
@@ -84,6 +86,16 @@ namespace DLSLQueueingApp
             con.Open();
             dReader = cmd.ExecuteReader();
             dReader.Close();
+
+            if (queueno == 0)
+            {
+                String query2 = "UPDATE cashier SET current_queue_number ='" + queueno_temp + "' where cashier_number=1;";
+                MySqlConnection con2 = new MySqlConnection(connection);
+                MySqlCommand cmd2 = new MySqlCommand(query2, con2);
+                con2.Open();
+                dReader = cmd2.ExecuteReader();
+                dReader.Close();
+            }
         }
 
         private void nextQueueBtn_Click(object sender, EventArgs e)

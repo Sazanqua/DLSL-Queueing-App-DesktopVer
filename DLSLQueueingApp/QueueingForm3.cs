@@ -18,6 +18,7 @@ namespace DLSLQueueingApp
             InitializeComponent();
         }
         int queueno;
+        int queueno_temp;
         private void QueueingForm3_Load(object sender, EventArgs e)
         {
             MaximizeBox = false; // Disable Maximize button
@@ -43,7 +44,7 @@ namespace DLSLQueueingApp
         public void loadData()
         {
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "SELECT queue_no, queueing_status, service_type, service_lane FROM service WHERE cashier_number=1 AND queueing_status='PENDING' UNION SELECT queue_no, queueing_status, service_type, service_lane FROM service_manual WHERE cashier_number = 3 AND queueing_status='PENDING' ORDER BY service_lane = 'PRIORITY' DESC, queue_no ASC; ";
+            String query = "SELECT queue_no, queueing_status, service_type, service_lane FROM service WHERE cashier_number=3 AND queueing_status='PENDING' UNION SELECT queue_no, queueing_status, service_type, service_lane FROM service_manual WHERE cashier_number = 3 AND queueing_status='PENDING' ORDER BY service_lane = 'PRIORITY' DESC, queue_no ASC; ";
 
             using (MySqlConnection sqlCon = new MySqlConnection(connection))
             {
@@ -73,6 +74,7 @@ namespace DLSLQueueingApp
             else
             {
                 queueno = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value.ToString());
+                queueno_temp = queueno;
             }
         }
 
@@ -86,6 +88,16 @@ namespace DLSLQueueingApp
             con.Open();
             dReader = cmd.ExecuteReader();
             dReader.Close();
+
+            if (queueno == 0)
+            {
+                String query2 = "UPDATE cashier SET current_queue_number ='" + queueno_temp + "' where cashier_number=3;";
+                MySqlConnection con2 = new MySqlConnection(connection);
+                MySqlCommand cmd2 = new MySqlCommand(query2, con2);
+                con2.Open();
+                dReader = cmd2.ExecuteReader();
+                dReader.Close();
+            }
         }
 
         private void nextQueueBtn_Click(object sender, EventArgs e)
