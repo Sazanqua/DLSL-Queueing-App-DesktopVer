@@ -86,6 +86,12 @@
     <Compile Include="QueueingForm4.Designer.cs">
       <DependentUpon>QueueingForm4.cs</DependentUpon>
     </Compile>
+    <Compile Include="QueueingFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueueingFormMain.Designer.cs">
+      <DependentUpon>QueueingFormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QueueingForm4.resx">
       <DependentUpon>QueueingForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueingFormMain.resx">
+      <DependentUpon>QueueingFormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>

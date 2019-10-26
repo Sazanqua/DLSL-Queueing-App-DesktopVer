@@ -24,12 +24,6 @@ namespace DLSLQueueingApp
         public StartForm()
         {
             InitializeComponent();
-    
-            //String ConnectString = "server=localhost;user id=root;database=dlsl_app"; // Para magstart yung mysql
-            //MySqlConnection con = new MySqlConnection("ConnectString");
-
-            //MySqlDataAdapter msDataAdapter = new MySqlDataAdapter();
-            //msDataAdapter.SelectCommand = new MySqlCommand("");
         }
 
         private void StartForm_Load(object sender, EventArgs e)
@@ -50,12 +44,12 @@ namespace DLSLQueueingApp
                 connection.Open();
                 if (connection.State == ConnectionState.Open)
                 {
-                    label1.Text = "connected";
+                    label1.Text = "Connected";
                     label1.ForeColor = Color.Green;
                 }
                 else
                 {
-                    label1.Text = "no";
+                    label1.Text = "No Connection";
                     label1.ForeColor = Color.Red;
                 }
             }

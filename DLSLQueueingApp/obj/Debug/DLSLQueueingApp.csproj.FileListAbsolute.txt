@@ -61,3 +61,4 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm2.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm3.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingForm4.resources
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.QueueingFormMain.resources
