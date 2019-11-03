@@ -29,15 +29,18 @@ namespace DLSLQueueingApp
             base.OnCreateControl();
             Region = Region.FromHrgn(CreateRoundRectRgn(2, 3, Width, Height, 30, 30)); //play with these values till you are happy
         }
+        bool isFirst = true;
+        int cashierNumber;
+        int currentQueueNumber;
         public MonitorUserControl2()
         {
             InitializeComponent();
             cashierLabel.Text = "?";
             queueNumber.Text = "?";
-            queueType.Text = "?";
+            queueType.Text = "COLLEGE";
 
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "SELECT * FROM cashier WHERE cashier_number=2";
+            String query = "SELECT cashier_number, queue_no, queueing_status, service_type, service_lane FROM service WHERE cashier_number=2 AND queueing_status='PENDING' UNION SELECT cashier_number, queue_no, queueing_status, service_type, service_lane FROM service_manual WHERE cashier_number = 2 AND queueing_status='PENDING' ORDER BY service_lane = 'PRIORITY' DESC, queue_no ASC; ";
             MySqlConnection con = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, con);
             MySqlDataReader dReader;
@@ -47,12 +50,15 @@ namespace DLSLQueueingApp
                 dReader = cmd.ExecuteReader();
                 while (dReader.Read())
                 {
-                    int cashierNumber = dReader.GetInt32("cashier_number");
-                    cashierLabel.Text = cashierNumber.ToString();
-                    int currentQueueNumber = dReader.GetInt32("current_queue_number");
-                    queueNumber.Text = currentQueueNumber.ToString();
-                    String cashierType = dReader.GetString("cashier_type");
-                    queueType.Text = cashierType;
+                    if (isFirst)
+                    {
+                        cashierNumber = dReader.GetInt32("cashier_number");
+                        cashierLabel.Text = cashierNumber.ToString();
+                        currentQueueNumber = dReader.GetInt32("queue_no");
+                        queueNumber.Text = currentQueueNumber.ToString();
+
+                        isFirst = false;
+                    }
                 }
             }
             catch (Exception ex)

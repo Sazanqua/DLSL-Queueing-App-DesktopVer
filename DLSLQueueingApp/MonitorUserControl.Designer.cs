@@ -70,9 +70,9 @@
             this.queueType.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.queueType.Location = new System.Drawing.Point(120, 270);
             this.queueType.Name = "queueType";
-            this.queueType.Size = new System.Drawing.Size(151, 57);
+            this.queueType.Size = new System.Drawing.Size(252, 57);
             this.queueType.TabIndex = 3;
-            this.queueType.Text = "TYPE";
+            this.queueType.Text = "COLLEGE";
             // 
             // MonitorUserControl
             // 
