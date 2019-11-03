@@ -35,8 +35,8 @@ namespace DLSLQueueingApp
         public MonitorUserControl()
         {
             InitializeComponent();
-            cashierLabel.Text = "?";
-            queueNumber.Text = "?";
+            cashierLabel.Text = "1";
+            queueNumber.Text = "0";
             queueType.Text = "COLLEGE";
 
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
