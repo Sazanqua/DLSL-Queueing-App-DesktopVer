@@ -33,16 +33,16 @@
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.confirmBtn = new DLSLQueueingApp.CircularButton();
             this.ticketPanel = new System.Windows.Forms.Panel();
-            this.expirationDate = new System.Windows.Forms.Label();
-            this.edLbl = new System.Windows.Forms.Label();
+            this.dateLbl = new System.Windows.Forms.Label();
+            this.timeLbl = new System.Windows.Forms.Label();
             this.serviceLane = new System.Windows.Forms.Label();
             this.serviceType = new System.Windows.Forms.Label();
             this.cashierNumber = new System.Windows.Forms.Label();
             this.cLbl = new System.Windows.Forms.Label();
             this.queueNumber = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.confirmBtn = new DLSLQueueingApp.CircularButton();
             this.ticketPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,10 +66,22 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // confirmBtn
+            // 
+            this.confirmBtn.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBtn.ForeColor = System.Drawing.Color.White;
+            this.confirmBtn.Location = new System.Drawing.Point(830, 975);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(300, 70);
+            this.confirmBtn.TabIndex = 15;
+            this.confirmBtn.Text = "CONFIRM";
+            this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
+            // 
             // ticketPanel
             // 
-            this.ticketPanel.Controls.Add(this.expirationDate);
-            this.ticketPanel.Controls.Add(this.edLbl);
+            this.ticketPanel.Controls.Add(this.dateLbl);
+            this.ticketPanel.Controls.Add(this.timeLbl);
             this.ticketPanel.Controls.Add(this.serviceLane);
             this.ticketPanel.Controls.Add(this.serviceType);
             this.ticketPanel.Controls.Add(this.cashierNumber);
@@ -79,49 +91,49 @@
             this.ticketPanel.Location = new System.Drawing.Point(712, 372);
             this.ticketPanel.Name = "ticketPanel";
             this.ticketPanel.Size = new System.Drawing.Size(500, 500);
-            this.ticketPanel.TabIndex = 14;
+            this.ticketPanel.TabIndex = 16;
             // 
-            // expirationDate
+            // dateLbl
             // 
-            this.expirationDate.AutoSize = true;
-            this.expirationDate.BackColor = System.Drawing.Color.White;
-            this.expirationDate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expirationDate.Location = new System.Drawing.Point(285, 395);
-            this.expirationDate.Name = "expirationDate";
-            this.expirationDate.Size = new System.Drawing.Size(122, 34);
-            this.expirationDate.TabIndex = 19;
-            this.expirationDate.Text = "?/??/????";
+            this.dateLbl.AutoSize = true;
+            this.dateLbl.BackColor = System.Drawing.Color.White;
+            this.dateLbl.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLbl.Location = new System.Drawing.Point(127, 399);
+            this.dateLbl.Name = "dateLbl";
+            this.dateLbl.Size = new System.Drawing.Size(122, 34);
+            this.dateLbl.TabIndex = 19;
+            this.dateLbl.Text = "?/??/????";
             // 
-            // edLbl
+            // timeLbl
             // 
-            this.edLbl.AutoSize = true;
-            this.edLbl.BackColor = System.Drawing.Color.White;
-            this.edLbl.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edLbl.Location = new System.Drawing.Point(74, 395);
-            this.edLbl.Name = "edLbl";
-            this.edLbl.Size = new System.Drawing.Size(209, 34);
-            this.edLbl.TabIndex = 18;
-            this.edLbl.Text = "Expiration Date:";
+            this.timeLbl.AutoSize = true;
+            this.timeLbl.BackColor = System.Drawing.Color.White;
+            this.timeLbl.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLbl.Location = new System.Drawing.Point(154, 349);
+            this.timeLbl.Name = "timeLbl";
+            this.timeLbl.Size = new System.Drawing.Size(209, 34);
+            this.timeLbl.TabIndex = 18;
+            this.timeLbl.Text = "Expiration Date:";
             // 
             // serviceLane
             // 
             this.serviceLane.AutoSize = true;
             this.serviceLane.BackColor = System.Drawing.Color.White;
-            this.serviceLane.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLane.Location = new System.Drawing.Point(70, 310);
+            this.serviceLane.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceLane.Location = new System.Drawing.Point(55, 284);
             this.serviceLane.Name = "serviceLane";
-            this.serviceLane.Size = new System.Drawing.Size(138, 46);
+            this.serviceLane.Size = new System.Drawing.Size(126, 41);
             this.serviceLane.TabIndex = 17;
-            this.serviceLane.Text = "Priority";
+            this.serviceLane.Text = "Normal";
             // 
             // serviceType
             // 
             this.serviceType.AutoSize = true;
             this.serviceType.BackColor = System.Drawing.Color.White;
-            this.serviceType.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceType.Location = new System.Drawing.Point(240, 310);
+            this.serviceType.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceType.Location = new System.Drawing.Point(271, 284);
             this.serviceType.Name = "serviceType";
-            this.serviceType.Size = new System.Drawing.Size(142, 46);
+            this.serviceType.Size = new System.Drawing.Size(128, 41);
             this.serviceType.TabIndex = 16;
             this.serviceType.Text = "College";
             // 
@@ -169,18 +181,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // confirmBtn
-            // 
-            this.confirmBtn.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmBtn.ForeColor = System.Drawing.Color.White;
-            this.confirmBtn.Location = new System.Drawing.Point(830, 975);
-            this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(300, 70);
-            this.confirmBtn.TabIndex = 15;
-            this.confirmBtn.Text = "CONFIRM";
-            this.confirmBtn.UseVisualStyleBackColor = true;
-            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
-            // 
             // TicketForm4_3PriorityTicketPrinting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -188,8 +188,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1946, 1106);
-            this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.ticketPanel);
+            this.Controls.Add(this.confirmBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -208,15 +208,15 @@
         private System.Windows.Forms.Timer animationTimer;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private CircularButton confirmBtn;
         private System.Windows.Forms.Panel ticketPanel;
-        private System.Windows.Forms.Label expirationDate;
-        private System.Windows.Forms.Label edLbl;
+        private System.Windows.Forms.Label dateLbl;
+        private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.Label serviceLane;
         private System.Windows.Forms.Label serviceType;
         private System.Windows.Forms.Label cashierNumber;
         private System.Windows.Forms.Label cLbl;
         private System.Windows.Forms.Label queueNumber;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CircularButton confirmBtn;
     }
 }

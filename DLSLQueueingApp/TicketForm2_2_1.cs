@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
         }
+        private static readonly HttpClient client = new HttpClient();
 
         private void TicketForm2_2_1_Load(object sender, EventArgs e)
         {
@@ -45,18 +47,15 @@ namespace DLSLQueueingApp
                 animationTimer.Stop();
             }
         }
-
-        private void ticketForm2_2_1LogoutBtn_Click(object sender, EventArgs e)
+        private async void ticketForm2_2_1LogoutBtn_Click(object sender, EventArgs e)
         {
-            String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "UPDATE users SET currently_queueing = 'NO' WHERE currently_queueing = 'YES'; ";
-            MySqlConnection con = new MySqlConnection(connection);
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataReader dReader;
-            con.Open();
-            dReader = cmd.ExecuteReader();
-            dReader.Close();
+            var values = new Dictionary<string, string>
+                {
+                    { "studentNumber", "" }
+                };
+            var content = new FormUrlEncodedContent(values);
 
+            var response = await client.PostAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/userLogoutDesktop.php", content);
             TicketForm2_2 tf2_2 = new TicketForm2_2();
             tf2_2.ShowDialog();
             Close();

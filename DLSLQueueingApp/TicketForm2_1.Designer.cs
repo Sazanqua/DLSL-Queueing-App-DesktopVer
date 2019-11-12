@@ -61,7 +61,7 @@
             this.normalLaneBtn.Name = "normalLaneBtn";
             this.normalLaneBtn.Size = new System.Drawing.Size(900, 110);
             this.normalLaneBtn.TabIndex = 10;
-            this.normalLaneBtn.Text = "NORMAL LANE";
+            this.normalLaneBtn.Text = "REGULAR LANE";
             this.normalLaneBtn.UseVisualStyleBackColor = true;
             this.normalLaneBtn.Click += new System.EventHandler(this.normalLaneBtn_Click);
             // 

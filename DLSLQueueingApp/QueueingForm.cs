@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,10 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
         }
+        private static readonly HttpClient client = new HttpClient();
+
+        String totalNumberOfQueue;
+
         int queueno;
         int queueno_temp;
         private void QueueingForm_Load(object sender, EventArgs e)
@@ -26,6 +31,7 @@ namespace DLSLQueueingApp
             refreshBtn.BackColor = ColorTranslator.FromHtml("#146344");
             loadData();
             disableButton();
+
         }
         public void disableButton()
         {
@@ -40,40 +46,46 @@ namespace DLSLQueueingApp
                 nextQueueBtn.Enabled = true;
             }
         }
-        public void loadData(){
-            String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "SELECT queue_no, queueing_status, service_type, service_lane FROM service WHERE cashier_number=1 AND queueing_status='PENDING' UNION SELECT queue_no, queueing_status, service_type, service_lane FROM service_manual WHERE cashier_number = 1 AND queueing_status='PENDING' ORDER BY service_lane = 'PRIORITY' DESC, queue_no ASC; ";
 
-            using (MySqlConnection sqlCon = new MySqlConnection(connection))
-            {
-                sqlCon.Open();
-                MySqlDataAdapter sqlDa = new MySqlDataAdapter(query, sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dataGridView1.DataSource = dtbl;
-                dataGridView1.ClearSelection();
-            }
-            dataGridView1.AllowUserToAddRows = false;
+
+        public async void loadData(){
+            HttpResponseMessage totalQueueNumberResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1TotalNumber.php");
+            var responseString = await totalQueueNumberResponse.Content.ReadAsStringAsync();
+            totalNumberOfQueue = responseString;
+
+            HttpResponseMessage queueingStatusResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1QueuengStatus.php");
+            var responseString2 = await queueingStatusResponse.Content.ReadAsStringAsync();
+            String hella = responseString2;
+
+            int convertedTotalNumberOfQueue = Int32.Parse(totalNumberOfQueue);
+
+            DataTable dtbl = new DataTable();
+
+            dtbl.Columns.Add("Queue Number");
+            dtbl.Columns.Add("Queueing Status");
+            dtbl.Columns.Add("Service Type");
+            dtbl.Columns.Add("Service Lane");
+
+
+
+            int i = 1;
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+            while (i <= convertedTotalNumberOfQueue)
+            {
+                dtbl.Rows.Add(i, "PENDING", "A", "Q");
+                i++;
+
+            }
+
+
+            dataGridView1.DataSource = dtbl;
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.Columns[0].HeaderText = "Queue Number";
-            dataGridView1.Columns[1].HeaderText = "Queueing Status";
-            dataGridView1.Columns[2].HeaderText = "Service Type";
-            dataGridView1.Columns[3].HeaderText = "Service Lane";
             
-            if (dataGridView1.Rows.Count == 0)
-            {
-                queueno = 0;
-            }
-            else
-            {
-                queueno = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value.ToString());
-                queueno_temp = queueno;
-            }
         }
 
         public void updateCurrentQueueNumber()

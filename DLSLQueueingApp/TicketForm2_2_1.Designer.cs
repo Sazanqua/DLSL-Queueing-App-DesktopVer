@@ -99,7 +99,7 @@
             this.mobileQueue_NormalLaneBtn.Name = "mobileQueue_NormalLaneBtn";
             this.mobileQueue_NormalLaneBtn.Size = new System.Drawing.Size(900, 110);
             this.mobileQueue_NormalLaneBtn.TabIndex = 11;
-            this.mobileQueue_NormalLaneBtn.Text = "NORMAL LANE";
+            this.mobileQueue_NormalLaneBtn.Text = "REGULAR LANE";
             this.mobileQueue_NormalLaneBtn.UseVisualStyleBackColor = true;
             this.mobileQueue_NormalLaneBtn.Click += new System.EventHandler(this.mobileQueue_NormalLaneBtn_Click);
             // 

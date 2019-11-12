@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,8 +17,9 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
         }
+        private static readonly HttpClient client = new HttpClient();
 
-        private void TicketForm4_2OtherTicketPrinting_Load(object sender, EventArgs e)
+        private async void TicketForm4_2OtherTicketPrinting_Load(object sender, EventArgs e)
         {
             Opacity = 0.1; // Form Animation
             animationTimer.Start(); // Form Animation
@@ -25,8 +27,6 @@ namespace DLSLQueueingApp
             TopMost = true; // Para fullscreen
             FormBorderStyle = FormBorderStyle.None; // Para fullscreen
             WindowState = FormWindowState.Maximized; // Para fullscreen
-
-            string expDate = DateTime.Now.AddDays(1).ToString("MMM-dd-yyy");
 
             ticketPanel.BackColor = ColorTranslator.FromHtml("#146344");
             confirmBtn.BackColor = ColorTranslator.FromHtml("#146344");
@@ -36,31 +36,33 @@ namespace DLSLQueueingApp
             cashierNumber.ForeColor = ColorTranslator.FromHtml("#146344");
             serviceLane.ForeColor = ColorTranslator.FromHtml("#146344");
             serviceType.ForeColor = ColorTranslator.FromHtml("#146344");
-            edLbl.ForeColor = ColorTranslator.FromHtml("#146344");
-            expirationDate.ForeColor = ColorTranslator.FromHtml("#146344");
+            timeLbl.ForeColor = ColorTranslator.FromHtml("#146344");
+            dateLbl.ForeColor = ColorTranslator.FromHtml("#146344");
+            cLbl.Text = "Cashier ";
+            HttpResponseMessage cnr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketCashierNumber.php");
+            var cn = await cnr.Content.ReadAsStringAsync();
 
-            expirationDate.Text = expDate.ToString();
+            HttpResponseMessage qnr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketQueueNumber.php");
+            var qn = await qnr.Content.ReadAsStringAsync();
 
-            if (TicketForm3_1_NormalLane.numberOfQueueCashier1 == 0)
-            {
-                queueNumber.Text = TicketForm3_1_NormalLane.numberOfQueueCashier2.ToString();
-                cashierNumber.Text = "2";
-            }
-            else if (TicketForm3_1_NormalLane.numberOfQueueCashier2 == 0)
-            {
-                queueNumber.Text = TicketForm3_1_NormalLane.numberOfQueueCashier1.ToString();
-                cashierNumber.Text = "1";
-            }
-            else if (TicketForm3_1_NormalLane.numberOfQueueCashier3 == 0)
-            {
-                queueNumber.Text = TicketForm3_1_NormalLane.numberOfQueueCashier4.ToString();
-                cashierNumber.Text = "4";
-            }
-            else if (TicketForm3_1_NormalLane.numberOfQueueCashier4 == 0)
-            {
-                queueNumber.Text = TicketForm3_1_NormalLane.numberOfQueueCashier3.ToString();
-                cashierNumber.Text = "3";
-            }
+            HttpResponseMessage str = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketServiceType.php");
+            var st = await str.Content.ReadAsStringAsync();
+
+            HttpResponseMessage slr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketServiceLane.php");
+            var sl = await slr.Content.ReadAsStringAsync();
+
+            HttpResponseMessage tr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketTime.php");
+            var t = await tr.Content.ReadAsStringAsync();
+
+            HttpResponseMessage dr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/printServiceQueueTicketDate.php");
+            var d = await dr.Content.ReadAsStringAsync();
+
+            queueNumber.Text = qn;
+            cashierNumber.Text = cn;
+            serviceLane.Text = sl;
+            serviceType.Text = st;
+            dateLbl.Text = d;
+            timeLbl.Text = t;
         }
 
         private void animationTimer_Tick(object sender, EventArgs e)
@@ -93,12 +95,12 @@ namespace DLSLQueueingApp
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(queueNumber.Text, new Font("Times New Roman", 40, FontStyle.Regular), Brushes.Black, new Point(60, 70));
+            e.Graphics.DrawString(queueNumber.Text, new Font("Times New Roman", 40, FontStyle.Regular), Brushes.Black, new Point(60, 80));
             e.Graphics.DrawString("Cashier " + cashierNumber.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(65, 10));
-            e.Graphics.DrawString("Normal", new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(10, 40));
-            e.Graphics.DrawString("Others", new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(130, 40));
-            e.Graphics.DrawString("Expiration Date: ", new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(40, 150));
-            e.Graphics.DrawString(expirationDate.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(55, 170));
+            e.Graphics.DrawString(serviceLane.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(0, 40));
+            e.Graphics.DrawString(serviceType.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(110, 40));
+            e.Graphics.DrawString(dateLbl.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(35, 160));
+            e.Graphics.DrawString(timeLbl.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Black, new Point(65, 140));
         }
     }
 }

@@ -36,7 +36,6 @@
             this.monitorUserControl1 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl2 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl3 = new DLSLQueueingApp.MonitorUserControl();
-            this.monitorMainUserControl1 = new DLSLQueueingApp.MonitorMainUserControl();
             this.monitorUserControl41 = new DLSLQueueingApp.MonitorUserControl4();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -83,13 +82,6 @@
             this.monitorUserControl3.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl3.TabIndex = 6;
             // 
-            // monitorMainUserControl1
-            // 
-            this.monitorMainUserControl1.Location = new System.Drawing.Point(975, 297);
-            this.monitorMainUserControl1.Name = "monitorMainUserControl1";
-            this.monitorMainUserControl1.Size = new System.Drawing.Size(885, 725);
-            this.monitorMainUserControl1.TabIndex = 8;
-            // 
             // monitorUserControl41
             // 
             this.monitorUserControl41.Location = new System.Drawing.Point(480, 660);
@@ -127,7 +119,6 @@
         private MonitorUserControl monitorUserControl1;
         private MonitorUserControl monitorUserControl2;
         private MonitorUserControl monitorUserControl3;
-        private MonitorMainUserControl monitorMainUserControl1;
         private MonitorUserControl2 monitorUserControl21;
         private MonitorUserControl monitorUserControl4;
         private MonitorUserControl3 monitorUserControl31;

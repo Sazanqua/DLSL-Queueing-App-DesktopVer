@@ -30,7 +30,7 @@ namespace DLSLQueueingApp
             dataSource.Add(new Cashier() { Name = "Cashier 2", Value = "Cashier 2" });
             dataSource.Add(new Cashier() { Name = "Cashier 3", Value = "Cashier 3" });
             dataSource.Add(new Cashier() { Name = "Cashier 4", Value = "Cashier 4" });
-            dataSource.Add(new Cashier() { Name = "Queue Monitoring", Value = "Queue Monitoring" });
+            //dataSource.Add(new Cashier() { Name = "Queue Monitoring", Value = "Queue Monitoring" });
 
             comboBox1.DataSource = dataSource;
             comboBox1.DisplayMember = "Cashier";

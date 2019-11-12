@@ -5,9 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 
 namespace DLSLQueueingApp
 {
@@ -17,6 +21,8 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
         }
+
+        private static readonly HttpClient client = new HttpClient();
 
         private void TicketForm2_2_Load(object sender, EventArgs e)
         {
@@ -31,6 +37,7 @@ namespace DLSLQueueingApp
             studentNumber_Panel.BackColor = ColorTranslator.FromHtml("#21282E");
             password_Panel.BackColor = ColorTranslator.FromHtml("#21282E");
             ticketForm2_2LoginBtn.BackColor = ColorTranslator.FromHtml("#21282E");
+
         }
 
         private void animationTimer_Tick(object sender, EventArgs e)
@@ -98,7 +105,7 @@ namespace DLSLQueueingApp
             }
         }
 
-        private void ticketForm2_2LoginBtn_Click(object sender, EventArgs e)
+        private async void ticketForm2_2LoginBtn_Click(object sender, EventArgs e)
         {
             if (studentNumber_Txtbx.Text == "Student Number" && Password_Txtbx.Text == "Password")
             {
@@ -116,62 +123,33 @@ namespace DLSLQueueingApp
             }
             else
             {
-                String studentNumber_value = studentNumber_Txtbx.Text;
-                String password_value = Password_Txtbx.Text;
-                String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-                String query = "SELECT * FROM users WHERE student_number ='" + studentNumber_value + "'";
-                MySqlConnection con = new MySqlConnection(connection);
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                MySqlDataReader dReader;
-                try
+                var values = new Dictionary<string, string>
                 {
-                    con.Open();
-                    dReader = cmd.ExecuteReader();
-                    while (dReader.Read())
-                    {
-                        String studentNumber = dReader.GetString("student_number");
-                    }
-                    if (dReader.HasRows)
-                    {
-                        dReader.Close();
-                        String query2 = "SELECT student_number, password FROM users WHERE student_number ='" + studentNumber_value + "' AND password = '" + password_value + "'";
-                        
-                        MySqlCommand cmd2 = new MySqlCommand(query2, con);
-                        dReader = cmd2.ExecuteReader();
-                        while (dReader.Read())
-                        {
-                            String studentNumber = dReader.GetString("student_number");
-                            String password = dReader.GetString("password");
-                        }
-                        if (dReader.HasRows)
-                        {
-                            dReader.Close();
-                            String query3 = "UPDATE users SET currently_queueing = 'YES' WHERE student_number = '" + studentNumber_value + "'; ";
-                            MySqlCommand cmd3 = new MySqlCommand(query3, con);
-                            dReader = cmd3.ExecuteReader();
+                    { "studentNumber", studentNumber_Txtbx.Text },
+                    { "pass", Password_Txtbx.Text },
+                };
+                var content = new FormUrlEncodedContent(values);
 
-                            MessageBox.Show("LOGGING IN!");
-                            TicketForm2_2_1 tf2_2_1 = new TicketForm2_2_1();
-                            tf2_2_1.ShowDialog();
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("INVALID CREDENTIALS!");
-                        }
+                var response = await client.PostAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/userLoginDesktop.php", content);
+
+                var responseString = await response.Content.ReadAsStringAsync();
+                if (responseString.Contains("true"))
+                {
+                    MessageBox.Show("INVALID CREDENTIALS");
+                }
+                else
+                {
+                    if (responseString.Contains("hasQueueingNumber") && responseString.Contains("YES"))
+                    {
+                        MessageBox.Show("USER ALREADY HAS A QUEUEING TICKET");
                     }
                     else
                     {
-                        MessageBox.Show("INVALID CREDENTIALS!");
+                        MessageBox.Show("LOGGING IN!");
+                        TicketForm2_2_1 tf2_2_1 = new TicketForm2_2_1();
+                        tf2_2_1.ShowDialog();
+                        Close();
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
                 }
             }
         }
