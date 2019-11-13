@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,52 +36,37 @@ namespace DLSLQueueingApp
         }
         public void disableButton()
         {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                nextQueueBtn.BackColor = ColorTranslator.FromHtml("#cccccc");
-                nextQueueBtn.Enabled = false;
-            }
-            else
-            {
-                nextQueueBtn.BackColor = ColorTranslator.FromHtml("#146344");
-                nextQueueBtn.Enabled = true;
-            }
+            //if (dataGridView1.Rows.Count == 0)
+            //{
+            //    nextQueueBtn.BackColor = ColorTranslator.FromHtml("#cccccc");
+            //    nextQueueBtn.Enabled = false;
+            //}
+            //else
+            //{
+            //    nextQueueBtn.BackColor = ColorTranslator.FromHtml("#146344");
+            //    nextQueueBtn.Enabled = true;
+            //}
         }
 
 
         public async void loadData(){
-            HttpResponseMessage totalQueueNumberResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1TotalNumber.php");
-            var responseString = await totalQueueNumberResponse.Content.ReadAsStringAsync();
-            totalNumberOfQueue = responseString;
-
-            HttpResponseMessage queueingStatusResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1QueuengStatus.php");
-            var responseString2 = await queueingStatusResponse.Content.ReadAsStringAsync();
-            String hella = responseString2;
-
-            int convertedTotalNumberOfQueue = Int32.Parse(totalNumberOfQueue);
-
+            HttpResponseMessage queueData = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1TotalQueueData.php");
+            var responseString3 = await queueData.Content.ReadAsStringAsync();
+            String data = responseString3;
+            ServiceClass[] collection = JsonConvert.DeserializeObject<ServiceClass []>(data);
             DataTable dtbl = new DataTable();
-
             dtbl.Columns.Add("Queue Number");
             dtbl.Columns.Add("Queueing Status");
             dtbl.Columns.Add("Service Type");
             dtbl.Columns.Add("Service Lane");
-
-
-
-            int i = 1;
+            foreach (ServiceClass service in collection)
+            {
+                dtbl.Rows.Add(service.queue_no, service.queueing_status, service.type_of_queue, service.service_lane);
+            }
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            while (i <= convertedTotalNumberOfQueue)
-            {
-                dtbl.Rows.Add(i, "PENDING", "A", "Q");
-                i++;
-
-            }
-
-
             dataGridView1.DataSource = dtbl;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
@@ -88,26 +74,56 @@ namespace DLSLQueueingApp
             
         }
 
-        public void updateCurrentQueueNumber()
+        public async void updateCurrentQueueNumber()
         {
-            String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
-            String query = "UPDATE cashier SET current_queue_number ='" + queueno + "' where cashier_number=1;";
-            MySqlConnection con = new MySqlConnection(connection);
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataReader dReader;
-            con.Open();
-            dReader = cmd.ExecuteReader();
-            dReader.Close();
+            HttpResponseMessage totalQueueNumberResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1TotalNumber.php");
+            var responseString = await totalQueueNumberResponse.Content.ReadAsStringAsync();
+            totalNumberOfQueue = responseString;
 
-            if (queueno == 0)
+            int i = 1;
+            int convertedTotalNumberOfQueue = Int32.Parse(totalNumberOfQueue);
+            if (i <= convertedTotalNumberOfQueue)
             {
-                String query2 = "UPDATE cashier SET current_queue_number ='" + queueno_temp + "' where cashier_number=1;";
-                MySqlConnection con2 = new MySqlConnection(connection);
-                MySqlCommand cmd2 = new MySqlCommand(query2, con2);
-                con2.Open();
-                dReader = cmd2.ExecuteReader();
-                dReader.Close();
+
+                //var data3RD = new { queueNo = 3 };
+                var data = new { queueNo = i };
+                var json = JsonConvert.SerializeObject(data);
+                var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+                HttpResponseMessage queueingStatusResponse = await client.PostAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/.updateQueueViaNo.php", stringContent);
+                
+                i++;
+
             }
+
+
+
+
+            //var data3rd = new { queueno = 3 };
+            //var data = new { queueno = queueno };
+            //var json = jsonconvert.serializeobject(data);
+            //var stringcontent = new stringcontent(json, unicodeencoding.utf8, "application/json");
+            //httpresponsemessage queueingstatusresponse = await client.postasync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/.updatequeueviano.php", stringcontent);
+            //messagebox.show(data3rd.tostring());
+
+
+            //String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
+            //String query = "UPDATE cashier SET current_queue_number ='" + queueno + "' where cashier_number=1;";
+            //MySqlConnection con = new MySqlConnection(connection);
+            //MySqlCommand cmd = new MySqlCommand(query, con);
+            //MySqlDataReader dReader;
+            //con.Open();
+            //dReader = cmd.ExecuteReader();
+            //dReader.Close();
+
+            //if (queueno == 0)
+            //{
+            //    String query2 = "UPDATE cashier SET current_queue_number ='" + queueno_temp + "' where cashier_number=1;";
+            //    MySqlConnection con2 = new MySqlConnection(connection);
+            //    MySqlCommand cmd2 = new MySqlCommand(query2, con2);
+            //    con2.Open();
+            //    dReader = cmd2.ExecuteReader();
+            //    dReader.Close();
+            //}
         }
 
         private void nextQueueBtn_Click(object sender, EventArgs e)

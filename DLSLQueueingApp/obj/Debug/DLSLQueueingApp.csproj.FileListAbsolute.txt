@@ -37,7 +37,6 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitorUserControl2.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitorUserControl3.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.MonitorUserControl4.resources
-C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.csprojAssemblyReference.cache
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm2_1.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.TicketForm2_2.resources
@@ -63,3 +62,4 @@ C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingA
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.DesktopAppForm.resources
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yhigashioka\Documents\GitHub\DLSL-Queueing-App-DesktopVer\DLSLQueueingApp\obj\Debug\DLSLQueueingApp.csprojAssemblyReference.cache

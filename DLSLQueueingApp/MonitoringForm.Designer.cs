@@ -42,21 +42,21 @@
             // 
             // monitorUserControl31
             // 
-            this.monitorUserControl31.Location = new System.Drawing.Point(20, 660);
+            this.monitorUserControl31.Location = new System.Drawing.Point(401, 662);
             this.monitorUserControl31.Name = "monitorUserControl31";
             this.monitorUserControl31.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl31.TabIndex = 2;
             // 
             // monitorUserControl4
             // 
-            this.monitorUserControl4.Location = new System.Drawing.Point(20, 297);
+            this.monitorUserControl4.Location = new System.Drawing.Point(401, 297);
             this.monitorUserControl4.Name = "monitorUserControl4";
             this.monitorUserControl4.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl4.TabIndex = 1;
             // 
             // monitorUserControl21
             // 
-            this.monitorUserControl21.Location = new System.Drawing.Point(480, 297);
+            this.monitorUserControl21.Location = new System.Drawing.Point(1022, 297);
             this.monitorUserControl21.Name = "monitorUserControl21";
             this.monitorUserControl21.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl21.TabIndex = 0;
@@ -84,7 +84,7 @@
             // 
             // monitorUserControl41
             // 
-            this.monitorUserControl41.Location = new System.Drawing.Point(480, 660);
+            this.monitorUserControl41.Location = new System.Drawing.Point(1022, 662);
             this.monitorUserControl41.Name = "monitorUserControl41";
             this.monitorUserControl41.Size = new System.Drawing.Size(445, 350);
             this.monitorUserControl41.TabIndex = 3;

@@ -97,7 +97,8 @@
     <Compile Include="QueueingFormMain.Designer.cs">
       <DependentUpon>QueueingFormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Queues.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="ServiceClass.cs" />
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
