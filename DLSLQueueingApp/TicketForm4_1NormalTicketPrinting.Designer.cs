@@ -74,9 +74,8 @@
             this.dateLbl.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLbl.Location = new System.Drawing.Point(127, 399);
             this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(122, 34);
+            this.dateLbl.Size = new System.Drawing.Size(0, 34);
             this.dateLbl.TabIndex = 19;
-            this.dateLbl.Text = "?/??/????";
             // 
             // timeLbl
             // 
@@ -85,9 +84,8 @@
             this.timeLbl.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLbl.Location = new System.Drawing.Point(154, 349);
             this.timeLbl.Name = "timeLbl";
-            this.timeLbl.Size = new System.Drawing.Size(209, 34);
+            this.timeLbl.Size = new System.Drawing.Size(0, 34);
             this.timeLbl.TabIndex = 18;
-            this.timeLbl.Text = "Expiration Date:";
             // 
             // serviceLane
             // 
@@ -96,9 +94,8 @@
             this.serviceLane.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceLane.Location = new System.Drawing.Point(55, 284);
             this.serviceLane.Name = "serviceLane";
-            this.serviceLane.Size = new System.Drawing.Size(126, 41);
+            this.serviceLane.Size = new System.Drawing.Size(0, 41);
             this.serviceLane.TabIndex = 17;
-            this.serviceLane.Text = "Normal";
             // 
             // serviceType
             // 
@@ -107,9 +104,8 @@
             this.serviceType.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceType.Location = new System.Drawing.Point(271, 284);
             this.serviceType.Name = "serviceType";
-            this.serviceType.Size = new System.Drawing.Size(128, 41);
+            this.serviceType.Size = new System.Drawing.Size(0, 41);
             this.serviceType.TabIndex = 16;
-            this.serviceType.Text = "College";
             // 
             // cashierNumber
             // 
@@ -118,9 +114,8 @@
             this.cashierNumber.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cashierNumber.Location = new System.Drawing.Point(294, 190);
             this.cashierNumber.Name = "cashierNumber";
-            this.cashierNumber.Size = new System.Drawing.Size(40, 46);
+            this.cashierNumber.Size = new System.Drawing.Size(0, 46);
             this.cashierNumber.TabIndex = 15;
-            this.cashierNumber.Text = "#";
             // 
             // cLbl
             // 
@@ -140,9 +135,8 @@
             this.queueNumber.Font = new System.Drawing.Font("Times New Roman", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.queueNumber.Location = new System.Drawing.Point(190, 50);
             this.queueNumber.Name = "queueNumber";
-            this.queueNumber.Size = new System.Drawing.Size(78, 90);
+            this.queueNumber.Size = new System.Drawing.Size(0, 90);
             this.queueNumber.TabIndex = 1;
-            this.queueNumber.Text = "#";
             // 
             // pictureBox1
             // 

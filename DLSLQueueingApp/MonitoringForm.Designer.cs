@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.time_C2 = new System.Windows.Forms.Label();
             this.serviceType_2 = new System.Windows.Forms.Label();
             this.serviceLane_2 = new System.Windows.Forms.Label();
             this.queueNumber_2 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.time_C3 = new System.Windows.Forms.Label();
             this.serviceType_3 = new System.Windows.Forms.Label();
             this.serviceLane_3 = new System.Windows.Forms.Label();
             this.queueNumber_3 = new System.Windows.Forms.Label();
@@ -57,13 +57,61 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.time_C4 = new System.Windows.Forms.Label();
             this.serviceType_4 = new System.Windows.Forms.Label();
             this.serviceLane_4 = new System.Windows.Forms.Label();
             this.queueNumber_4 = new System.Windows.Forms.Label();
             this.cashierNumber_4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.c4_ServiceLane_5 = new System.Windows.Forms.Label();
+            this.c4_ServiceLane_4 = new System.Windows.Forms.Label();
+            this.c4_QueueNumber_5 = new System.Windows.Forms.Label();
+            this.c4_QueueNumber_4 = new System.Windows.Forms.Label();
+            this.c4_ServiceLane_3 = new System.Windows.Forms.Label();
+            this.c4_QueueNumber_3 = new System.Windows.Forms.Label();
+            this.c4_ServiceLane_2 = new System.Windows.Forms.Label();
+            this.c4_QueueNumber_2 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.c4_QueueNumber_1 = new System.Windows.Forms.Label();
+            this.c4_ServiceLane_1 = new System.Windows.Forms.Label();
+            this.c1_ServiceLane_1 = new System.Windows.Forms.Label();
+            this.c1_QueueNumber_1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.c1_ServiceLane_5 = new System.Windows.Forms.Label();
+            this.c1_ServiceLane_4 = new System.Windows.Forms.Label();
+            this.c1_QueueNumber_5 = new System.Windows.Forms.Label();
+            this.c1_QueueNumber_4 = new System.Windows.Forms.Label();
+            this.c1_ServiceLane_3 = new System.Windows.Forms.Label();
+            this.c1_QueueNumber_3 = new System.Windows.Forms.Label();
+            this.c1_ServiceLane_2 = new System.Windows.Forms.Label();
+            this.c1_QueueNumber_2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.c2_ServiceLane_5 = new System.Windows.Forms.Label();
+            this.c2_ServiceLane_4 = new System.Windows.Forms.Label();
+            this.c2_QueueNumber_5 = new System.Windows.Forms.Label();
+            this.c2_QueueNumber_4 = new System.Windows.Forms.Label();
+            this.c2_ServiceLane_3 = new System.Windows.Forms.Label();
+            this.c2_QueueNumber_3 = new System.Windows.Forms.Label();
+            this.c2_ServiceLane_2 = new System.Windows.Forms.Label();
+            this.c2_QueueNumber_2 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.c2_QueueNumber_1 = new System.Windows.Forms.Label();
+            this.c2_ServiceLane_1 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.c3_ServiceLane_5 = new System.Windows.Forms.Label();
+            this.c3_ServiceLane_4 = new System.Windows.Forms.Label();
+            this.c3_QueueNumber_5 = new System.Windows.Forms.Label();
+            this.c3_QueueNumber_4 = new System.Windows.Forms.Label();
+            this.c3_ServiceLane_3 = new System.Windows.Forms.Label();
+            this.c3_QueueNumber_3 = new System.Windows.Forms.Label();
+            this.c3_ServiceLane_2 = new System.Windows.Forms.Label();
+            this.c3_QueueNumber_2 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.c3_QueueNumber_1 = new System.Windows.Forms.Label();
+            this.c3_ServiceLane_1 = new System.Windows.Forms.Label();
             this.monitorUserControl1 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl2 = new DLSLQueueingApp.MonitorUserControl();
             this.monitorUserControl3 = new DLSLQueueingApp.MonitorUserControl();
@@ -71,6 +119,11 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -165,7 +218,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.time_C2);
             this.panel2.Controls.Add(this.serviceType_2);
             this.panel2.Controls.Add(this.serviceLane_2);
             this.panel2.Controls.Add(this.queueNumber_2);
@@ -186,15 +239,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Time Served: ";
             // 
-            // label5
+            // time_C2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(260, 295);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 34);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "00:00:00 am";
+            this.time_C2.AutoSize = true;
+            this.time_C2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_C2.Location = new System.Drawing.Point(260, 295);
+            this.time_C2.Name = "time_C2";
+            this.time_C2.Size = new System.Drawing.Size(165, 34);
+            this.time_C2.TabIndex = 7;
+            this.time_C2.Text = "00:00:00 am";
             // 
             // serviceType_2
             // 
@@ -249,7 +302,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.time_C3);
             this.panel3.Controls.Add(this.serviceType_3);
             this.panel3.Controls.Add(this.serviceLane_3);
             this.panel3.Controls.Add(this.queueNumber_3);
@@ -270,15 +323,15 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Time Served: ";
             // 
-            // label13
+            // time_C3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(260, 295);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(165, 34);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "00:00:00 am";
+            this.time_C3.AutoSize = true;
+            this.time_C3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_C3.Location = new System.Drawing.Point(260, 295);
+            this.time_C3.Name = "time_C3";
+            this.time_C3.Size = new System.Drawing.Size(165, 34);
+            this.time_C3.TabIndex = 7;
+            this.time_C3.Text = "00:00:00 am";
             // 
             // serviceType_3
             // 
@@ -333,7 +386,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.time_C4);
             this.panel4.Controls.Add(this.serviceType_4);
             this.panel4.Controls.Add(this.serviceLane_4);
             this.panel4.Controls.Add(this.queueNumber_4);
@@ -354,15 +407,15 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "Time Served: ";
             // 
-            // label19
+            // time_C4
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(260, 295);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(165, 34);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "00:00:00 am";
+            this.time_C4.AutoSize = true;
+            this.time_C4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_C4.Location = new System.Drawing.Point(260, 295);
+            this.time_C4.Name = "time_C4";
+            this.time_C4.Size = new System.Drawing.Size(165, 34);
+            this.time_C4.TabIndex = 7;
+            this.time_C4.Text = "00:00:00 am";
             // 
             // serviceType_4
             // 
@@ -416,10 +469,523 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.panel9);
             this.panel5.Location = new System.Drawing.Point(1040, 305);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(805, 720);
             this.panel5.TabIndex = 11;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.c4_ServiceLane_5);
+            this.panel9.Controls.Add(this.c4_ServiceLane_4);
+            this.panel9.Controls.Add(this.c4_QueueNumber_5);
+            this.panel9.Controls.Add(this.c4_QueueNumber_4);
+            this.panel9.Controls.Add(this.c4_ServiceLane_3);
+            this.panel9.Controls.Add(this.c4_QueueNumber_3);
+            this.panel9.Controls.Add(this.c4_ServiceLane_2);
+            this.panel9.Controls.Add(this.c4_QueueNumber_2);
+            this.panel9.Controls.Add(this.label22);
+            this.panel9.Controls.Add(this.c4_QueueNumber_1);
+            this.panel9.Controls.Add(this.c4_ServiceLane_1);
+            this.panel9.Location = new System.Drawing.Point(400, 360);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(405, 360);
+            this.panel9.TabIndex = 4;
+            // 
+            // c4_ServiceLane_5
+            // 
+            this.c4_ServiceLane_5.AutoSize = true;
+            this.c4_ServiceLane_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_ServiceLane_5.Location = new System.Drawing.Point(190, 300);
+            this.c4_ServiceLane_5.Name = "c4_ServiceLane_5";
+            this.c4_ServiceLane_5.Size = new System.Drawing.Size(144, 39);
+            this.c4_ServiceLane_5.TabIndex = 10;
+            this.c4_ServiceLane_5.Text = "S_LANE";
+            // 
+            // c4_ServiceLane_4
+            // 
+            this.c4_ServiceLane_4.AutoSize = true;
+            this.c4_ServiceLane_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_ServiceLane_4.Location = new System.Drawing.Point(190, 250);
+            this.c4_ServiceLane_4.Name = "c4_ServiceLane_4";
+            this.c4_ServiceLane_4.Size = new System.Drawing.Size(144, 39);
+            this.c4_ServiceLane_4.TabIndex = 9;
+            this.c4_ServiceLane_4.Text = "S_LANE";
+            // 
+            // c4_QueueNumber_5
+            // 
+            this.c4_QueueNumber_5.AutoSize = true;
+            this.c4_QueueNumber_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_QueueNumber_5.Location = new System.Drawing.Point(50, 300);
+            this.c4_QueueNumber_5.Name = "c4_QueueNumber_5";
+            this.c4_QueueNumber_5.Size = new System.Drawing.Size(67, 39);
+            this.c4_QueueNumber_5.TabIndex = 8;
+            this.c4_QueueNumber_5.Text = "QN";
+            // 
+            // c4_QueueNumber_4
+            // 
+            this.c4_QueueNumber_4.AutoSize = true;
+            this.c4_QueueNumber_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_QueueNumber_4.Location = new System.Drawing.Point(50, 250);
+            this.c4_QueueNumber_4.Name = "c4_QueueNumber_4";
+            this.c4_QueueNumber_4.Size = new System.Drawing.Size(67, 39);
+            this.c4_QueueNumber_4.TabIndex = 7;
+            this.c4_QueueNumber_4.Text = "QN";
+            // 
+            // c4_ServiceLane_3
+            // 
+            this.c4_ServiceLane_3.AutoSize = true;
+            this.c4_ServiceLane_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_ServiceLane_3.Location = new System.Drawing.Point(190, 200);
+            this.c4_ServiceLane_3.Name = "c4_ServiceLane_3";
+            this.c4_ServiceLane_3.Size = new System.Drawing.Size(144, 39);
+            this.c4_ServiceLane_3.TabIndex = 6;
+            this.c4_ServiceLane_3.Text = "S_LANE";
+            // 
+            // c4_QueueNumber_3
+            // 
+            this.c4_QueueNumber_3.AutoSize = true;
+            this.c4_QueueNumber_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_QueueNumber_3.Location = new System.Drawing.Point(50, 200);
+            this.c4_QueueNumber_3.Name = "c4_QueueNumber_3";
+            this.c4_QueueNumber_3.Size = new System.Drawing.Size(67, 39);
+            this.c4_QueueNumber_3.TabIndex = 5;
+            this.c4_QueueNumber_3.Text = "QN";
+            // 
+            // c4_ServiceLane_2
+            // 
+            this.c4_ServiceLane_2.AutoSize = true;
+            this.c4_ServiceLane_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_ServiceLane_2.Location = new System.Drawing.Point(190, 150);
+            this.c4_ServiceLane_2.Name = "c4_ServiceLane_2";
+            this.c4_ServiceLane_2.Size = new System.Drawing.Size(144, 39);
+            this.c4_ServiceLane_2.TabIndex = 4;
+            this.c4_ServiceLane_2.Text = "S_LANE";
+            // 
+            // c4_QueueNumber_2
+            // 
+            this.c4_QueueNumber_2.AutoSize = true;
+            this.c4_QueueNumber_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_QueueNumber_2.Location = new System.Drawing.Point(50, 150);
+            this.c4_QueueNumber_2.Name = "c4_QueueNumber_2";
+            this.c4_QueueNumber_2.Size = new System.Drawing.Size(67, 39);
+            this.c4_QueueNumber_2.TabIndex = 3;
+            this.c4_QueueNumber_2.Text = "QN";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(64, 18);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(258, 68);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Cashier 4";
+            // 
+            // c4_QueueNumber_1
+            // 
+            this.c4_QueueNumber_1.AutoSize = true;
+            this.c4_QueueNumber_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_QueueNumber_1.Location = new System.Drawing.Point(50, 100);
+            this.c4_QueueNumber_1.Name = "c4_QueueNumber_1";
+            this.c4_QueueNumber_1.Size = new System.Drawing.Size(67, 39);
+            this.c4_QueueNumber_1.TabIndex = 0;
+            this.c4_QueueNumber_1.Text = "QN";
+            // 
+            // c4_ServiceLane_1
+            // 
+            this.c4_ServiceLane_1.AutoSize = true;
+            this.c4_ServiceLane_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c4_ServiceLane_1.Location = new System.Drawing.Point(190, 100);
+            this.c4_ServiceLane_1.Name = "c4_ServiceLane_1";
+            this.c4_ServiceLane_1.Size = new System.Drawing.Size(144, 39);
+            this.c4_ServiceLane_1.TabIndex = 1;
+            this.c4_ServiceLane_1.Text = "S_LANE";
+            // 
+            // c1_ServiceLane_1
+            // 
+            this.c1_ServiceLane_1.AutoSize = true;
+            this.c1_ServiceLane_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_ServiceLane_1.Location = new System.Drawing.Point(190, 100);
+            this.c1_ServiceLane_1.Name = "c1_ServiceLane_1";
+            this.c1_ServiceLane_1.Size = new System.Drawing.Size(144, 39);
+            this.c1_ServiceLane_1.TabIndex = 1;
+            this.c1_ServiceLane_1.Text = "S_LANE";
+            // 
+            // c1_QueueNumber_1
+            // 
+            this.c1_QueueNumber_1.AutoSize = true;
+            this.c1_QueueNumber_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_QueueNumber_1.Location = new System.Drawing.Point(50, 100);
+            this.c1_QueueNumber_1.Name = "c1_QueueNumber_1";
+            this.c1_QueueNumber_1.Size = new System.Drawing.Size(67, 39);
+            this.c1_QueueNumber_1.TabIndex = 0;
+            this.c1_QueueNumber_1.Text = "QN";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.c1_ServiceLane_5);
+            this.panel6.Controls.Add(this.c1_ServiceLane_4);
+            this.panel6.Controls.Add(this.c1_QueueNumber_5);
+            this.panel6.Controls.Add(this.c1_QueueNumber_4);
+            this.panel6.Controls.Add(this.c1_ServiceLane_3);
+            this.panel6.Controls.Add(this.c1_QueueNumber_3);
+            this.panel6.Controls.Add(this.c1_ServiceLane_2);
+            this.panel6.Controls.Add(this.c1_QueueNumber_2);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.c1_QueueNumber_1);
+            this.panel6.Controls.Add(this.c1_ServiceLane_1);
+            this.panel6.Location = new System.Drawing.Point(1040, 305);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(405, 360);
+            this.panel6.TabIndex = 2;
+            // 
+            // c1_ServiceLane_5
+            // 
+            this.c1_ServiceLane_5.AutoSize = true;
+            this.c1_ServiceLane_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_ServiceLane_5.Location = new System.Drawing.Point(190, 300);
+            this.c1_ServiceLane_5.Name = "c1_ServiceLane_5";
+            this.c1_ServiceLane_5.Size = new System.Drawing.Size(144, 39);
+            this.c1_ServiceLane_5.TabIndex = 10;
+            this.c1_ServiceLane_5.Text = "S_LANE";
+            // 
+            // c1_ServiceLane_4
+            // 
+            this.c1_ServiceLane_4.AutoSize = true;
+            this.c1_ServiceLane_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_ServiceLane_4.Location = new System.Drawing.Point(190, 250);
+            this.c1_ServiceLane_4.Name = "c1_ServiceLane_4";
+            this.c1_ServiceLane_4.Size = new System.Drawing.Size(144, 39);
+            this.c1_ServiceLane_4.TabIndex = 9;
+            this.c1_ServiceLane_4.Text = "S_LANE";
+            // 
+            // c1_QueueNumber_5
+            // 
+            this.c1_QueueNumber_5.AutoSize = true;
+            this.c1_QueueNumber_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_QueueNumber_5.Location = new System.Drawing.Point(50, 300);
+            this.c1_QueueNumber_5.Name = "c1_QueueNumber_5";
+            this.c1_QueueNumber_5.Size = new System.Drawing.Size(67, 39);
+            this.c1_QueueNumber_5.TabIndex = 8;
+            this.c1_QueueNumber_5.Text = "QN";
+            // 
+            // c1_QueueNumber_4
+            // 
+            this.c1_QueueNumber_4.AutoSize = true;
+            this.c1_QueueNumber_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_QueueNumber_4.Location = new System.Drawing.Point(50, 250);
+            this.c1_QueueNumber_4.Name = "c1_QueueNumber_4";
+            this.c1_QueueNumber_4.Size = new System.Drawing.Size(67, 39);
+            this.c1_QueueNumber_4.TabIndex = 7;
+            this.c1_QueueNumber_4.Text = "QN";
+            // 
+            // c1_ServiceLane_3
+            // 
+            this.c1_ServiceLane_3.AutoSize = true;
+            this.c1_ServiceLane_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_ServiceLane_3.Location = new System.Drawing.Point(190, 200);
+            this.c1_ServiceLane_3.Name = "c1_ServiceLane_3";
+            this.c1_ServiceLane_3.Size = new System.Drawing.Size(144, 39);
+            this.c1_ServiceLane_3.TabIndex = 6;
+            this.c1_ServiceLane_3.Text = "S_LANE";
+            // 
+            // c1_QueueNumber_3
+            // 
+            this.c1_QueueNumber_3.AutoSize = true;
+            this.c1_QueueNumber_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_QueueNumber_3.Location = new System.Drawing.Point(50, 200);
+            this.c1_QueueNumber_3.Name = "c1_QueueNumber_3";
+            this.c1_QueueNumber_3.Size = new System.Drawing.Size(67, 39);
+            this.c1_QueueNumber_3.TabIndex = 5;
+            this.c1_QueueNumber_3.Text = "QN";
+            // 
+            // c1_ServiceLane_2
+            // 
+            this.c1_ServiceLane_2.AutoSize = true;
+            this.c1_ServiceLane_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_ServiceLane_2.Location = new System.Drawing.Point(190, 150);
+            this.c1_ServiceLane_2.Name = "c1_ServiceLane_2";
+            this.c1_ServiceLane_2.Size = new System.Drawing.Size(144, 39);
+            this.c1_ServiceLane_2.TabIndex = 4;
+            this.c1_ServiceLane_2.Text = "S_LANE";
+            // 
+            // c1_QueueNumber_2
+            // 
+            this.c1_QueueNumber_2.AutoSize = true;
+            this.c1_QueueNumber_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c1_QueueNumber_2.Location = new System.Drawing.Point(50, 150);
+            this.c1_QueueNumber_2.Name = "c1_QueueNumber_2";
+            this.c1_QueueNumber_2.Size = new System.Drawing.Size(67, 39);
+            this.c1_QueueNumber_2.TabIndex = 3;
+            this.c1_QueueNumber_2.Text = "QN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 68);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cashier 1";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.c2_ServiceLane_5);
+            this.panel7.Controls.Add(this.c2_ServiceLane_4);
+            this.panel7.Controls.Add(this.c2_QueueNumber_5);
+            this.panel7.Controls.Add(this.c2_QueueNumber_4);
+            this.panel7.Controls.Add(this.c2_ServiceLane_3);
+            this.panel7.Controls.Add(this.c2_QueueNumber_3);
+            this.panel7.Controls.Add(this.c2_ServiceLane_2);
+            this.panel7.Controls.Add(this.c2_QueueNumber_2);
+            this.panel7.Controls.Add(this.label20);
+            this.panel7.Controls.Add(this.c2_QueueNumber_1);
+            this.panel7.Controls.Add(this.c2_ServiceLane_1);
+            this.panel7.Location = new System.Drawing.Point(1441, 305);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(405, 360);
+            this.panel7.TabIndex = 3;
+            // 
+            // c2_ServiceLane_5
+            // 
+            this.c2_ServiceLane_5.AutoSize = true;
+            this.c2_ServiceLane_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_ServiceLane_5.Location = new System.Drawing.Point(190, 300);
+            this.c2_ServiceLane_5.Name = "c2_ServiceLane_5";
+            this.c2_ServiceLane_5.Size = new System.Drawing.Size(144, 39);
+            this.c2_ServiceLane_5.TabIndex = 10;
+            this.c2_ServiceLane_5.Text = "S_LANE";
+            // 
+            // c2_ServiceLane_4
+            // 
+            this.c2_ServiceLane_4.AutoSize = true;
+            this.c2_ServiceLane_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_ServiceLane_4.Location = new System.Drawing.Point(190, 250);
+            this.c2_ServiceLane_4.Name = "c2_ServiceLane_4";
+            this.c2_ServiceLane_4.Size = new System.Drawing.Size(144, 39);
+            this.c2_ServiceLane_4.TabIndex = 9;
+            this.c2_ServiceLane_4.Text = "S_LANE";
+            // 
+            // c2_QueueNumber_5
+            // 
+            this.c2_QueueNumber_5.AutoSize = true;
+            this.c2_QueueNumber_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_QueueNumber_5.Location = new System.Drawing.Point(50, 300);
+            this.c2_QueueNumber_5.Name = "c2_QueueNumber_5";
+            this.c2_QueueNumber_5.Size = new System.Drawing.Size(67, 39);
+            this.c2_QueueNumber_5.TabIndex = 8;
+            this.c2_QueueNumber_5.Text = "QN";
+            // 
+            // c2_QueueNumber_4
+            // 
+            this.c2_QueueNumber_4.AutoSize = true;
+            this.c2_QueueNumber_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_QueueNumber_4.Location = new System.Drawing.Point(50, 250);
+            this.c2_QueueNumber_4.Name = "c2_QueueNumber_4";
+            this.c2_QueueNumber_4.Size = new System.Drawing.Size(67, 39);
+            this.c2_QueueNumber_4.TabIndex = 7;
+            this.c2_QueueNumber_4.Text = "QN";
+            // 
+            // c2_ServiceLane_3
+            // 
+            this.c2_ServiceLane_3.AutoSize = true;
+            this.c2_ServiceLane_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_ServiceLane_3.Location = new System.Drawing.Point(190, 200);
+            this.c2_ServiceLane_3.Name = "c2_ServiceLane_3";
+            this.c2_ServiceLane_3.Size = new System.Drawing.Size(144, 39);
+            this.c2_ServiceLane_3.TabIndex = 6;
+            this.c2_ServiceLane_3.Text = "S_LANE";
+            // 
+            // c2_QueueNumber_3
+            // 
+            this.c2_QueueNumber_3.AutoSize = true;
+            this.c2_QueueNumber_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_QueueNumber_3.Location = new System.Drawing.Point(50, 200);
+            this.c2_QueueNumber_3.Name = "c2_QueueNumber_3";
+            this.c2_QueueNumber_3.Size = new System.Drawing.Size(67, 39);
+            this.c2_QueueNumber_3.TabIndex = 5;
+            this.c2_QueueNumber_3.Text = "QN";
+            // 
+            // c2_ServiceLane_2
+            // 
+            this.c2_ServiceLane_2.AutoSize = true;
+            this.c2_ServiceLane_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_ServiceLane_2.Location = new System.Drawing.Point(190, 150);
+            this.c2_ServiceLane_2.Name = "c2_ServiceLane_2";
+            this.c2_ServiceLane_2.Size = new System.Drawing.Size(144, 39);
+            this.c2_ServiceLane_2.TabIndex = 4;
+            this.c2_ServiceLane_2.Text = "S_LANE";
+            // 
+            // c2_QueueNumber_2
+            // 
+            this.c2_QueueNumber_2.AutoSize = true;
+            this.c2_QueueNumber_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_QueueNumber_2.Location = new System.Drawing.Point(50, 150);
+            this.c2_QueueNumber_2.Name = "c2_QueueNumber_2";
+            this.c2_QueueNumber_2.Size = new System.Drawing.Size(67, 39);
+            this.c2_QueueNumber_2.TabIndex = 3;
+            this.c2_QueueNumber_2.Text = "QN";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(64, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(258, 68);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Cashier 2";
+            // 
+            // c2_QueueNumber_1
+            // 
+            this.c2_QueueNumber_1.AutoSize = true;
+            this.c2_QueueNumber_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_QueueNumber_1.Location = new System.Drawing.Point(50, 100);
+            this.c2_QueueNumber_1.Name = "c2_QueueNumber_1";
+            this.c2_QueueNumber_1.Size = new System.Drawing.Size(67, 39);
+            this.c2_QueueNumber_1.TabIndex = 0;
+            this.c2_QueueNumber_1.Text = "QN";
+            // 
+            // c2_ServiceLane_1
+            // 
+            this.c2_ServiceLane_1.AutoSize = true;
+            this.c2_ServiceLane_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c2_ServiceLane_1.Location = new System.Drawing.Point(190, 100);
+            this.c2_ServiceLane_1.Name = "c2_ServiceLane_1";
+            this.c2_ServiceLane_1.Size = new System.Drawing.Size(144, 39);
+            this.c2_ServiceLane_1.TabIndex = 1;
+            this.c2_ServiceLane_1.Text = "S_LANE";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.c3_ServiceLane_5);
+            this.panel8.Controls.Add(this.c3_ServiceLane_4);
+            this.panel8.Controls.Add(this.c3_QueueNumber_5);
+            this.panel8.Controls.Add(this.c3_QueueNumber_4);
+            this.panel8.Controls.Add(this.c3_ServiceLane_3);
+            this.panel8.Controls.Add(this.c3_QueueNumber_3);
+            this.panel8.Controls.Add(this.c3_ServiceLane_2);
+            this.panel8.Controls.Add(this.c3_QueueNumber_2);
+            this.panel8.Controls.Add(this.label21);
+            this.panel8.Controls.Add(this.c3_QueueNumber_1);
+            this.panel8.Controls.Add(this.c3_ServiceLane_1);
+            this.panel8.Location = new System.Drawing.Point(1040, 665);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(405, 360);
+            this.panel8.TabIndex = 3;
+            // 
+            // c3_ServiceLane_5
+            // 
+            this.c3_ServiceLane_5.AutoSize = true;
+            this.c3_ServiceLane_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_ServiceLane_5.Location = new System.Drawing.Point(190, 300);
+            this.c3_ServiceLane_5.Name = "c3_ServiceLane_5";
+            this.c3_ServiceLane_5.Size = new System.Drawing.Size(144, 39);
+            this.c3_ServiceLane_5.TabIndex = 10;
+            this.c3_ServiceLane_5.Text = "S_LANE";
+            // 
+            // c3_ServiceLane_4
+            // 
+            this.c3_ServiceLane_4.AutoSize = true;
+            this.c3_ServiceLane_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_ServiceLane_4.Location = new System.Drawing.Point(190, 250);
+            this.c3_ServiceLane_4.Name = "c3_ServiceLane_4";
+            this.c3_ServiceLane_4.Size = new System.Drawing.Size(144, 39);
+            this.c3_ServiceLane_4.TabIndex = 9;
+            this.c3_ServiceLane_4.Text = "S_LANE";
+            // 
+            // c3_QueueNumber_5
+            // 
+            this.c3_QueueNumber_5.AutoSize = true;
+            this.c3_QueueNumber_5.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_QueueNumber_5.Location = new System.Drawing.Point(50, 300);
+            this.c3_QueueNumber_5.Name = "c3_QueueNumber_5";
+            this.c3_QueueNumber_5.Size = new System.Drawing.Size(67, 39);
+            this.c3_QueueNumber_5.TabIndex = 8;
+            this.c3_QueueNumber_5.Text = "QN";
+            // 
+            // c3_QueueNumber_4
+            // 
+            this.c3_QueueNumber_4.AutoSize = true;
+            this.c3_QueueNumber_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_QueueNumber_4.Location = new System.Drawing.Point(50, 250);
+            this.c3_QueueNumber_4.Name = "c3_QueueNumber_4";
+            this.c3_QueueNumber_4.Size = new System.Drawing.Size(67, 39);
+            this.c3_QueueNumber_4.TabIndex = 7;
+            this.c3_QueueNumber_4.Text = "QN";
+            // 
+            // c3_ServiceLane_3
+            // 
+            this.c3_ServiceLane_3.AutoSize = true;
+            this.c3_ServiceLane_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_ServiceLane_3.Location = new System.Drawing.Point(190, 200);
+            this.c3_ServiceLane_3.Name = "c3_ServiceLane_3";
+            this.c3_ServiceLane_3.Size = new System.Drawing.Size(144, 39);
+            this.c3_ServiceLane_3.TabIndex = 6;
+            this.c3_ServiceLane_3.Text = "S_LANE";
+            // 
+            // c3_QueueNumber_3
+            // 
+            this.c3_QueueNumber_3.AutoSize = true;
+            this.c3_QueueNumber_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_QueueNumber_3.Location = new System.Drawing.Point(50, 200);
+            this.c3_QueueNumber_3.Name = "c3_QueueNumber_3";
+            this.c3_QueueNumber_3.Size = new System.Drawing.Size(67, 39);
+            this.c3_QueueNumber_3.TabIndex = 5;
+            this.c3_QueueNumber_3.Text = "QN";
+            // 
+            // c3_ServiceLane_2
+            // 
+            this.c3_ServiceLane_2.AutoSize = true;
+            this.c3_ServiceLane_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_ServiceLane_2.Location = new System.Drawing.Point(190, 150);
+            this.c3_ServiceLane_2.Name = "c3_ServiceLane_2";
+            this.c3_ServiceLane_2.Size = new System.Drawing.Size(144, 39);
+            this.c3_ServiceLane_2.TabIndex = 4;
+            this.c3_ServiceLane_2.Text = "S_LANE";
+            // 
+            // c3_QueueNumber_2
+            // 
+            this.c3_QueueNumber_2.AutoSize = true;
+            this.c3_QueueNumber_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_QueueNumber_2.Location = new System.Drawing.Point(50, 150);
+            this.c3_QueueNumber_2.Name = "c3_QueueNumber_2";
+            this.c3_QueueNumber_2.Size = new System.Drawing.Size(67, 39);
+            this.c3_QueueNumber_2.TabIndex = 3;
+            this.c3_QueueNumber_2.Text = "QN";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(64, 18);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(258, 68);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Cashier 3";
+            // 
+            // c3_QueueNumber_1
+            // 
+            this.c3_QueueNumber_1.AutoSize = true;
+            this.c3_QueueNumber_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_QueueNumber_1.Location = new System.Drawing.Point(50, 100);
+            this.c3_QueueNumber_1.Name = "c3_QueueNumber_1";
+            this.c3_QueueNumber_1.Size = new System.Drawing.Size(67, 39);
+            this.c3_QueueNumber_1.TabIndex = 0;
+            this.c3_QueueNumber_1.Text = "QN";
+            // 
+            // c3_ServiceLane_1
+            // 
+            this.c3_ServiceLane_1.AutoSize = true;
+            this.c3_ServiceLane_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c3_ServiceLane_1.Location = new System.Drawing.Point(190, 100);
+            this.c3_ServiceLane_1.Name = "c3_ServiceLane_1";
+            this.c3_ServiceLane_1.Size = new System.Drawing.Size(144, 39);
+            this.c3_ServiceLane_1.TabIndex = 1;
+            this.c3_ServiceLane_1.Text = "S_LANE";
             // 
             // monitorUserControl1
             // 
@@ -449,6 +1015,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -468,6 +1037,15 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,7 +1065,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label time_C2;
         private System.Windows.Forms.Label serviceType_2;
         private System.Windows.Forms.Label serviceLane_2;
         private System.Windows.Forms.Label queueNumber_2;
@@ -495,7 +1073,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label time_C3;
         private System.Windows.Forms.Label serviceType_3;
         private System.Windows.Forms.Label serviceLane_3;
         private System.Windows.Forms.Label queueNumber_3;
@@ -503,12 +1081,60 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label time_C4;
         private System.Windows.Forms.Label serviceType_4;
         private System.Windows.Forms.Label serviceLane_4;
         private System.Windows.Forms.Label queueNumber_4;
         private System.Windows.Forms.Label cashierNumber_4;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label c1_ServiceLane_1;
+        private System.Windows.Forms.Label c1_QueueNumber_1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label c1_QueueNumber_2;
+        private System.Windows.Forms.Label c1_ServiceLane_5;
+        private System.Windows.Forms.Label c1_ServiceLane_4;
+        private System.Windows.Forms.Label c1_QueueNumber_5;
+        private System.Windows.Forms.Label c1_QueueNumber_4;
+        private System.Windows.Forms.Label c1_ServiceLane_3;
+        private System.Windows.Forms.Label c1_QueueNumber_3;
+        private System.Windows.Forms.Label c1_ServiceLane_2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label c2_ServiceLane_5;
+        private System.Windows.Forms.Label c2_ServiceLane_4;
+        private System.Windows.Forms.Label c2_QueueNumber_5;
+        private System.Windows.Forms.Label c2_QueueNumber_4;
+        private System.Windows.Forms.Label c2_ServiceLane_3;
+        private System.Windows.Forms.Label c2_QueueNumber_3;
+        private System.Windows.Forms.Label c2_ServiceLane_2;
+        private System.Windows.Forms.Label c2_QueueNumber_2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label c2_QueueNumber_1;
+        private System.Windows.Forms.Label c2_ServiceLane_1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label c3_ServiceLane_5;
+        private System.Windows.Forms.Label c3_ServiceLane_4;
+        private System.Windows.Forms.Label c3_QueueNumber_5;
+        private System.Windows.Forms.Label c3_QueueNumber_4;
+        private System.Windows.Forms.Label c3_ServiceLane_3;
+        private System.Windows.Forms.Label c3_QueueNumber_3;
+        private System.Windows.Forms.Label c3_ServiceLane_2;
+        private System.Windows.Forms.Label c3_QueueNumber_2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label c3_QueueNumber_1;
+        private System.Windows.Forms.Label c3_ServiceLane_1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label c4_ServiceLane_5;
+        private System.Windows.Forms.Label c4_ServiceLane_4;
+        private System.Windows.Forms.Label c4_QueueNumber_5;
+        private System.Windows.Forms.Label c4_QueueNumber_4;
+        private System.Windows.Forms.Label c4_ServiceLane_3;
+        private System.Windows.Forms.Label c4_QueueNumber_3;
+        private System.Windows.Forms.Label c4_ServiceLane_2;
+        private System.Windows.Forms.Label c4_QueueNumber_2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label c4_QueueNumber_1;
+        private System.Windows.Forms.Label c4_ServiceLane_1;
     }
 }

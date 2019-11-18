@@ -16,7 +16,7 @@ namespace DLSLQueueingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MonitoringForm());
+            Application.Run(new DesktopAppForm());
         }
     }
 }
