@@ -16,5 +16,6 @@ namespace DLSLQueueingApp
         public String service_lane { get; set; }
         public String date_column { get; set; }
         public String time_column { get; set; }
+        public String service_type { get; set; }
     }
 }

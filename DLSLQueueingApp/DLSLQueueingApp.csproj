@@ -97,7 +97,6 @@
     <Compile Include="QueueingFormMain.Designer.cs">
       <DependentUpon>QueueingFormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Service.cs" />
     <Compile Include="ServiceClass.cs" />
     <Compile Include="TicketForm.cs">
       <SubType>Form</SubType>
@@ -140,24 +139,6 @@
     </Compile>
     <Compile Include="MonitorUserControl4.Designer.cs">
       <DependentUpon>MonitorUserControl4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page2.Designer.cs">
-      <DependentUpon>Page2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page3.Designer.cs">
-      <DependentUpon>Page3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page4.Designer.cs">
-      <DependentUpon>Page4.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -301,15 +282,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonitorUserControl4.resx">
       <DependentUpon>MonitorUserControl4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page2.resx">
-      <DependentUpon>Page2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page3.resx">
-      <DependentUpon>Page3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page4.resx">
-      <DependentUpon>Page4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net.Http;
 
 namespace DLSLQueueingApp
 {
@@ -24,6 +25,8 @@ namespace DLSLQueueingApp
             int nheightRect, //height of ellipse 
             int nweightRect //width of ellipse
         );
+        private static readonly HttpClient client = new HttpClient();
+
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
@@ -32,12 +35,21 @@ namespace DLSLQueueingApp
         bool isFirst = true;
         int cashierNumber;
         int currentQueueNumber;
+        public async void dataFunc()
+        {
+            HttpResponseMessage qnr = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/1_Cashier_QueueNumber_Monitor.php");
+            var qn = await qnr.Content.ReadAsStringAsync();
+            queueNumber.Text = qn +"asd";
+        }
         public MonitorUserControl()
         {
             InitializeComponent();
-            cashierLabel.Text = "1";
-            queueNumber.Text = "0";
-            queueType.Text = "COLLEGE";
+            dataFunc();
+            //cashierLabel.Text = "1";
+            //queueNumber.Text = "0";
+            //queueType.Text = "COLLEGE";
+
+
 
             String connection = "server=localhost;user id=root; password=root;database=dlsl_app"; // Para magstart yung mysql
             String query = "SELECT cashier_number, queue_no, queueing_status, service_type, service_lane FROM service WHERE cashier_number=1 AND queueing_status='PENDING' UNION SELECT cashier_number, queue_no, queueing_status, service_type, service_lane FROM service_manual WHERE cashier_number = 1 AND queueing_status='PENDING' ORDER BY service_lane = 'PRIORITY' DESC, queue_no ASC; ";

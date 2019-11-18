@@ -45,7 +45,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 81);
             this.label1.TabIndex = 2;
-            this.label1.Text = "CASHIER 1";
+            this.label1.Text = "CASHIER 4";
             // 
             // dataGridView1
             // 

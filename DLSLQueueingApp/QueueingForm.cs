@@ -19,12 +19,7 @@ namespace DLSLQueueingApp
         {
             InitializeComponent();
         }
-        private static readonly HttpClient client = new HttpClient();
-
-        String totalNumberOfQueue;
-
-        int queueno=0;
-        int queueno_temp;
+        private static readonly HttpClient client = new HttpClient();       
         private void QueueingForm_Load(object sender, EventArgs e)
         {
             MaximizeBox = false; // Disable Maximize button
@@ -32,26 +27,23 @@ namespace DLSLQueueingApp
             refreshBtn.BackColor = ColorTranslator.FromHtml("#146344");
             loadData();
             disableButton();
-
         }
         public void disableButton()
         {
-            //if (dataGridView1.Rows.Count == 0)
-            //{
-            //    nextQueueBtn.BackColor = ColorTranslator.FromHtml("#cccccc");
-            //    nextQueueBtn.Enabled = false;
-            //}
-            //else
-            //{
-            //    nextQueueBtn.BackColor = ColorTranslator.FromHtml("#146344");
-            //    nextQueueBtn.Enabled = true;
-            //}
+            if (dataGridView1.Rows.Count == 0)
+            {
+                nextQueueBtn.BackColor = ColorTranslator.FromHtml("#cccccc");
+                nextQueueBtn.Enabled = false;
+            }
+            else
+            {
+                nextQueueBtn.BackColor = ColorTranslator.FromHtml("#146344");
+                nextQueueBtn.Enabled = true;
+            }
         }
 
 
         public async void loadData(){
-            int temp = 0;
-
             HttpResponseMessage queueData = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/fetchCashier1TotalQueueData.php");
             var responseString3 = await queueData.Content.ReadAsStringAsync();
             String data = responseString3;
@@ -61,10 +53,6 @@ namespace DLSLQueueingApp
             dtbl.Columns.Add("Queueing Status");
             dtbl.Columns.Add("Service Type");
             dtbl.Columns.Add("Service Lane");
-            foreach (ServiceClass service in collection)
-            {
-                dtbl.Rows.Add(service.queue_no, service.queueing_status, service.type_of_queue, service.service_lane);
-            }
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -73,16 +61,25 @@ namespace DLSLQueueingApp
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dataGridView1.AllowUserToResizeRows = false;
+            if (collection == null)
+            {
+                
+            }
+            else
+            {
+                foreach (ServiceClass service in collection)
+                {
+                    dtbl.Rows.Add(service.queue_no, service.queueing_status, service.type_of_queue, service.service_lane);
+                }
+            }
             loadData();
             disableButton();
         }
 
         public async void updateCurrentQueueNumber()
         {
-            var data = new { queueNo = queueno };
-            var json = JsonConvert.SerializeObject(data);
-            var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-            HttpResponseMessage queueingStatusResponse = await client.PostAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/.updateQueueViaNo.php", stringContent);
+            HttpResponseMessage updateResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/cashier1_updateQueueViaNo.php");
+            var ur = await updateResponse.Content.ReadAsStringAsync();
         }
 
         private void nextQueueBtn_Click(object sender, EventArgs e)
