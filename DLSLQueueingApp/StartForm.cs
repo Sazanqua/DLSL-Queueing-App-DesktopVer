@@ -37,26 +37,6 @@ namespace DLSLQueueingApp
             tm.Interval = 3000;
             tm.Tick += new EventHandler(changeImage);
             tm.Start();
-
-            try
-            {
-                MySqlConnection connection = new MySqlConnection("server=localhost;user id=root; password=root; database=dlsl_app");
-                connection.Open();
-                if (connection.State == ConnectionState.Open)
-                {
-                    label1.Text = "Connected";
-                    label1.ForeColor = Color.Green;
-                }
-                else
-                {
-                    label1.Text = "No Connection";
-                    label1.ForeColor = Color.Red;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void changeImage(object sender, EventArgs e)
