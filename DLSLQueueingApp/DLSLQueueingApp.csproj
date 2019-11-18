@@ -116,30 +116,6 @@
     <Compile Include="MonitoringForm.Designer.cs">
       <DependentUpon>MonitoringForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MonitorUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MonitorUserControl.Designer.cs">
-      <DependentUpon>MonitorUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MonitorUserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MonitorUserControl2.Designer.cs">
-      <DependentUpon>MonitorUserControl2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MonitorUserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MonitorUserControl3.Designer.cs">
-      <DependentUpon>MonitorUserControl3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MonitorUserControl4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MonitorUserControl4.Designer.cs">
-      <DependentUpon>MonitorUserControl4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartForm.cs">
@@ -270,18 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonitoringForm.resx">
       <DependentUpon>MonitoringForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MonitorUserControl.resx">
-      <DependentUpon>MonitorUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MonitorUserControl2.resx">
-      <DependentUpon>MonitorUserControl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MonitorUserControl3.resx">
-      <DependentUpon>MonitorUserControl3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MonitorUserControl4.resx">
-      <DependentUpon>MonitorUserControl4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

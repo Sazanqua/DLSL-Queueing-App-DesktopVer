@@ -112,9 +112,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.c3_QueueNumber_1 = new System.Windows.Forms.Label();
             this.c3_ServiceLane_1 = new System.Windows.Forms.Label();
-            this.monitorUserControl1 = new DLSLQueueingApp.MonitorUserControl();
-            this.monitorUserControl2 = new DLSLQueueingApp.MonitorUserControl();
-            this.monitorUserControl3 = new DLSLQueueingApp.MonitorUserControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -987,26 +984,6 @@
             this.c3_ServiceLane_1.TabIndex = 1;
             this.c3_ServiceLane_1.Text = "S_LANE";
             // 
-            // monitorUserControl1
-            // 
-            this.monitorUserControl1.Location = new System.Drawing.Point(20, 297);
-            this.monitorUserControl1.Name = "monitorUserControl1";
-            this.monitorUserControl1.Size = new System.Drawing.Size(445, 350);
-            this.monitorUserControl1.TabIndex = 4;
-            // 
-            // monitorUserControl2
-            // 
-            this.monitorUserControl2.Location = new System.Drawing.Point(480, 667);
-            this.monitorUserControl2.Name = "monitorUserControl2";
-            this.monitorUserControl2.Size = new System.Drawing.Size(445, 350);
-            this.monitorUserControl2.TabIndex = 5;
-            // 
-            // monitorUserControl3
-            // 
-            this.monitorUserControl3.Location = new System.Drawing.Point(20, 667);
-            this.monitorUserControl3.Name = "monitorUserControl3";
-            this.monitorUserControl3.Size = new System.Drawing.Size(445, 350);
-            this.monitorUserControl3.TabIndex = 6;
             // 
             // MonitoringForm
             // 
@@ -1051,9 +1028,6 @@
         }
 
         #endregion
-        private MonitorUserControl monitorUserControl1;
-        private MonitorUserControl monitorUserControl2;
-        private MonitorUserControl monitorUserControl3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
