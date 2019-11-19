@@ -72,13 +72,13 @@ namespace DLSLQueueingApp
 
         private async void ticketForm3_1OthersBtn_Click(object sender, EventArgs e)
         {
-            HttpResponseMessage validationResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/validationForRegularLaneCollege.php");
+            HttpResponseMessage validationResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/validationForRegularLaneOthers.php");
             var vrString = await validationResponse.Content.ReadAsStringAsync();
-            if (vrString.Contains("1YES"))
+            if (vrString.Contains("3YES"))
             {
                 HttpResponseMessage getResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/manualQueueRegularLaneOthersCashier3.php");
             }
-            else if (vrString.Contains("2YES"))
+            else if (vrString.Contains("4YES"))
             {
                 HttpResponseMessage getResponse = await client.GetAsync("http://dlslqueueingapp-merwincastromjc253154.codeanyapp.com/v1/manualQueueRegularLaneOthersCashier4.php");
             }

@@ -32,32 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonitoringForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.time_C1 = new System.Windows.Forms.Label();
             this.serviceType_1 = new System.Windows.Forms.Label();
             this.serviceLane_1 = new System.Windows.Forms.Label();
             this.queueNumber_1 = new System.Windows.Forms.Label();
             this.cashierNumber_1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.time_C2 = new System.Windows.Forms.Label();
             this.serviceType_2 = new System.Windows.Forms.Label();
             this.serviceLane_2 = new System.Windows.Forms.Label();
             this.queueNumber_2 = new System.Windows.Forms.Label();
             this.cashierNumber_2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.time_C3 = new System.Windows.Forms.Label();
             this.serviceType_3 = new System.Windows.Forms.Label();
             this.serviceLane_3 = new System.Windows.Forms.Label();
             this.queueNumber_3 = new System.Windows.Forms.Label();
             this.cashierNumber_3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.time_C4 = new System.Windows.Forms.Label();
             this.serviceType_4 = new System.Windows.Forms.Label();
             this.serviceLane_4 = new System.Windows.Forms.Label();
             this.queueNumber_4 = new System.Windows.Forms.Label();
@@ -125,13 +117,11 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 60000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.time_C1);
             this.panel1.Controls.Add(this.serviceType_1);
             this.panel1.Controls.Add(this.serviceLane_1);
             this.panel1.Controls.Add(this.queueNumber_1);
@@ -142,31 +132,11 @@
             this.panel1.Size = new System.Drawing.Size(445, 350);
             this.panel1.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 295);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 34);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Time Served: ";
-            // 
-            // time_C1
-            // 
-            this.time_C1.AutoSize = true;
-            this.time_C1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_C1.Location = new System.Drawing.Point(260, 295);
-            this.time_C1.Name = "time_C1";
-            this.time_C1.Size = new System.Drawing.Size(165, 34);
-            this.time_C1.TabIndex = 7;
-            this.time_C1.Text = "00:00:00 am";
-            // 
             // serviceType_1
             // 
             this.serviceType_1.AutoSize = true;
             this.serviceType_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceType_1.Location = new System.Drawing.Point(17, 235);
+            this.serviceType_1.Location = new System.Drawing.Point(15, 295);
             this.serviceType_1.Name = "serviceType_1";
             this.serviceType_1.Size = new System.Drawing.Size(139, 39);
             this.serviceType_1.TabIndex = 4;
@@ -176,7 +146,7 @@
             // 
             this.serviceLane_1.AutoSize = true;
             this.serviceLane_1.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLane_1.Location = new System.Drawing.Point(259, 235);
+            this.serviceLane_1.Location = new System.Drawing.Point(260, 295);
             this.serviceLane_1.Name = "serviceLane_1";
             this.serviceLane_1.Size = new System.Drawing.Size(144, 39);
             this.serviceLane_1.TabIndex = 3;
@@ -186,7 +156,7 @@
             // 
             this.queueNumber_1.AutoSize = true;
             this.queueNumber_1.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queueNumber_1.Location = new System.Drawing.Point(160, 96);
+            this.queueNumber_1.Location = new System.Drawing.Point(160, 125);
             this.queueNumber_1.Name = "queueNumber_1";
             this.queueNumber_1.Size = new System.Drawing.Size(98, 114);
             this.queueNumber_1.TabIndex = 2;
@@ -214,8 +184,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.time_C2);
             this.panel2.Controls.Add(this.serviceType_2);
             this.panel2.Controls.Add(this.serviceLane_2);
             this.panel2.Controls.Add(this.queueNumber_2);
@@ -226,31 +194,11 @@
             this.panel2.Size = new System.Drawing.Size(445, 350);
             this.panel2.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 295);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 34);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Time Served: ";
-            // 
-            // time_C2
-            // 
-            this.time_C2.AutoSize = true;
-            this.time_C2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_C2.Location = new System.Drawing.Point(260, 295);
-            this.time_C2.Name = "time_C2";
-            this.time_C2.Size = new System.Drawing.Size(165, 34);
-            this.time_C2.TabIndex = 7;
-            this.time_C2.Text = "00:00:00 am";
-            // 
             // serviceType_2
             // 
             this.serviceType_2.AutoSize = true;
             this.serviceType_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceType_2.Location = new System.Drawing.Point(17, 235);
+            this.serviceType_2.Location = new System.Drawing.Point(15, 295);
             this.serviceType_2.Name = "serviceType_2";
             this.serviceType_2.Size = new System.Drawing.Size(139, 39);
             this.serviceType_2.TabIndex = 4;
@@ -260,7 +208,7 @@
             // 
             this.serviceLane_2.AutoSize = true;
             this.serviceLane_2.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLane_2.Location = new System.Drawing.Point(259, 235);
+            this.serviceLane_2.Location = new System.Drawing.Point(260, 295);
             this.serviceLane_2.Name = "serviceLane_2";
             this.serviceLane_2.Size = new System.Drawing.Size(144, 39);
             this.serviceLane_2.TabIndex = 3;
@@ -270,7 +218,7 @@
             // 
             this.queueNumber_2.AutoSize = true;
             this.queueNumber_2.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queueNumber_2.Location = new System.Drawing.Point(160, 96);
+            this.queueNumber_2.Location = new System.Drawing.Point(160, 125);
             this.queueNumber_2.Name = "queueNumber_2";
             this.queueNumber_2.Size = new System.Drawing.Size(98, 114);
             this.queueNumber_2.TabIndex = 2;
@@ -298,8 +246,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.time_C3);
             this.panel3.Controls.Add(this.serviceType_3);
             this.panel3.Controls.Add(this.serviceLane_3);
             this.panel3.Controls.Add(this.queueNumber_3);
@@ -310,31 +256,11 @@
             this.panel3.Size = new System.Drawing.Size(445, 350);
             this.panel3.TabIndex = 9;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 295);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 34);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Time Served: ";
-            // 
-            // time_C3
-            // 
-            this.time_C3.AutoSize = true;
-            this.time_C3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_C3.Location = new System.Drawing.Point(260, 295);
-            this.time_C3.Name = "time_C3";
-            this.time_C3.Size = new System.Drawing.Size(165, 34);
-            this.time_C3.TabIndex = 7;
-            this.time_C3.Text = "00:00:00 am";
-            // 
             // serviceType_3
             // 
             this.serviceType_3.AutoSize = true;
             this.serviceType_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceType_3.Location = new System.Drawing.Point(17, 235);
+            this.serviceType_3.Location = new System.Drawing.Point(15, 295);
             this.serviceType_3.Name = "serviceType_3";
             this.serviceType_3.Size = new System.Drawing.Size(139, 39);
             this.serviceType_3.TabIndex = 4;
@@ -344,7 +270,7 @@
             // 
             this.serviceLane_3.AutoSize = true;
             this.serviceLane_3.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLane_3.Location = new System.Drawing.Point(259, 235);
+            this.serviceLane_3.Location = new System.Drawing.Point(260, 295);
             this.serviceLane_3.Name = "serviceLane_3";
             this.serviceLane_3.Size = new System.Drawing.Size(144, 39);
             this.serviceLane_3.TabIndex = 3;
@@ -354,7 +280,7 @@
             // 
             this.queueNumber_3.AutoSize = true;
             this.queueNumber_3.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queueNumber_3.Location = new System.Drawing.Point(160, 96);
+            this.queueNumber_3.Location = new System.Drawing.Point(160, 125);
             this.queueNumber_3.Name = "queueNumber_3";
             this.queueNumber_3.Size = new System.Drawing.Size(98, 114);
             this.queueNumber_3.TabIndex = 2;
@@ -382,8 +308,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.time_C4);
             this.panel4.Controls.Add(this.serviceType_4);
             this.panel4.Controls.Add(this.serviceLane_4);
             this.panel4.Controls.Add(this.queueNumber_4);
@@ -394,31 +318,11 @@
             this.panel4.Size = new System.Drawing.Size(445, 350);
             this.panel4.TabIndex = 10;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 295);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(182, 34);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Time Served: ";
-            // 
-            // time_C4
-            // 
-            this.time_C4.AutoSize = true;
-            this.time_C4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_C4.Location = new System.Drawing.Point(260, 295);
-            this.time_C4.Name = "time_C4";
-            this.time_C4.Size = new System.Drawing.Size(165, 34);
-            this.time_C4.TabIndex = 7;
-            this.time_C4.Text = "00:00:00 am";
-            // 
             // serviceType_4
             // 
             this.serviceType_4.AutoSize = true;
             this.serviceType_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceType_4.Location = new System.Drawing.Point(17, 235);
+            this.serviceType_4.Location = new System.Drawing.Point(15, 295);
             this.serviceType_4.Name = "serviceType_4";
             this.serviceType_4.Size = new System.Drawing.Size(139, 39);
             this.serviceType_4.TabIndex = 4;
@@ -428,7 +332,7 @@
             // 
             this.serviceLane_4.AutoSize = true;
             this.serviceLane_4.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLane_4.Location = new System.Drawing.Point(259, 235);
+            this.serviceLane_4.Location = new System.Drawing.Point(260, 295);
             this.serviceLane_4.Name = "serviceLane_4";
             this.serviceLane_4.Size = new System.Drawing.Size(144, 39);
             this.serviceLane_4.TabIndex = 3;
@@ -438,7 +342,7 @@
             // 
             this.queueNumber_4.AutoSize = true;
             this.queueNumber_4.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.queueNumber_4.Location = new System.Drawing.Point(160, 96);
+            this.queueNumber_4.Location = new System.Drawing.Point(160, 125);
             this.queueNumber_4.Name = "queueNumber_4";
             this.queueNumber_4.Size = new System.Drawing.Size(98, 114);
             this.queueNumber_4.TabIndex = 2;
@@ -741,7 +645,7 @@
             this.panel7.Controls.Add(this.label20);
             this.panel7.Controls.Add(this.c2_QueueNumber_1);
             this.panel7.Controls.Add(this.c2_ServiceLane_1);
-            this.panel7.Location = new System.Drawing.Point(1441, 305);
+            this.panel7.Location = new System.Drawing.Point(1440, 305);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(405, 360);
             this.panel7.TabIndex = 3;
@@ -984,7 +888,6 @@
             this.c3_ServiceLane_1.TabIndex = 1;
             this.c3_ServiceLane_1.Text = "S_LANE";
             // 
-            // 
             // MonitoringForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1035,27 +938,19 @@
         private System.Windows.Forms.Label queueNumber_1;
         private System.Windows.Forms.Label serviceLane_1;
         private System.Windows.Forms.Label serviceType_1;
-        private System.Windows.Forms.Label time_C1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label time_C2;
         private System.Windows.Forms.Label serviceType_2;
         private System.Windows.Forms.Label serviceLane_2;
         private System.Windows.Forms.Label queueNumber_2;
         private System.Windows.Forms.Label cashierNumber_2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label time_C3;
         private System.Windows.Forms.Label serviceType_3;
         private System.Windows.Forms.Label serviceLane_3;
         private System.Windows.Forms.Label queueNumber_3;
         private System.Windows.Forms.Label cashierNumber_3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label time_C4;
         private System.Windows.Forms.Label serviceType_4;
         private System.Windows.Forms.Label serviceLane_4;
         private System.Windows.Forms.Label queueNumber_4;
